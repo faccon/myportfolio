@@ -1,0 +1,324 @@
+:root {
+  --navbar-height: 6vh;
+  --navbar-color: var(--underline-color);
+  --top-padding: 2rem;
+  --left-padding: 20vh;
+  --underline-color: hsla(196, 61%, 58%, 0.75);
+  --lef-mp-md: 3rem;
+  --card-height-md: 400px;
+  --card-width-md: 240px;
+  --card-nf-m-md: -4rem;
+  --card-fc-m-md: 2rem;
+  --card-fs-m-lg: 20px;
+  --card-subt-m-lg: 20px;
+  --margin-md-t: 5rem;
+  --footer-height: var(--navbar-height);
+  --lastchild-mb: 20%;
+  --padding-4px: 4px;
+  --padding-1rem: 1rem;
+}
+
+body {
+  background-color: whitesmoke;
+}
+
+.nav-item-right {
+  padding-right: 30px;
+  padding-left: 10px;
+}
+
+.Nav-logo {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 10px;
+}
+
+.Nav-text {
+  font-size: 5vw;
+  color: black;
+}
+
+.nav-toggle {
+  border: 0;
+  font-size: 2vh;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.navbar {
+  color: black;
+  background-color: white;
+  padding: 0 var(--padding-1rem) 0 var(--padding-1rem);
+  margin: 0;
+  z-index: 1;
+  min-height: var(--navbar-height);
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #18272f;
+}
+
+.g-link a {
+  background-image: linear-gradient(to right, #54b3d6, #54b3d6 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: -100%;
+  display: inline-block;
+  padding: 5px 0;
+  position: relative;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+.g-link a:before {
+  content: '';
+  background: #54b3d6;
+  display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  transition: all 0.3s ease-in-out;
+}
+
+.g-link a:hover {
+  background-position: 0;
+}
+
+.g-link a:hover::before {
+  width: 100%;
+}
+
+.g-link {
+  /* background-color: aquamarine; */
+  display: flex;
+  margin: 0;
+  padding-right: 20px;
+}
+
+.h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: px;
+  color: black;
+}
+
+.h3 {
+  font-family: 'Secular One', sans-serif;
+  font-size: 0.5vw;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: gray;
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+
+.section-1 {
+  background-color: white;
+  width: 100%;
+  height: calc(100vh - (var(--navbar-height)));
+}
+
+.section-2 {
+  width: 100%;
+  height: calc(100vh - (var(--navbar-height)));
+}
+
+.emboss {
+  font-size: 14vw;
+  color: rgba(255, 255, 255, 1);
+  text-transform: uppercase;
+  text-shadow: -3px 1px 5px rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 1);
+  font-family: 'Secular One', sans-serif;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: var(--footer-height);
+  background-color: white;
+  border-top: 1px solid whitesmoke;
+  display: flex;
+  align-items: center;
+  padding: 0px 30px 10px 30px;
+}
+
+.left span {
+  align-self: center;
+  position: relative;
+  bottom: -10px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  padding: 5px;
+  background-color: whitesmoke;
+}
+
+.test-1 {
+  background-color: bisque;
+}
+
+.test-2 {
+  background-color: aquamarine;
+}
+.card-body .bottom-flags {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  width: 100%;
+}
+
+.skills .left {
+  margin-left: var(--lef-mp-md);
+  background-color: white;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skills h2 {
+  font-size: 4rem;
+}
+
+.skill-item-container {
+  float: left;
+  margin-top: 2px;
+}
+.skill-item {
+  border: wheat solid 1px;
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  border-radius: 5px;
+  margin: 0 0.3rem 0.3rem 0;
+  font-size: 15px;
+}
+
+.work-together {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: var(--lastchild-mb);
+}
+
+.last-section {
+  background-color: white;
+}
+.wk-t {
+  font-size: 1.5rem;
+  font-family: 'Secular One', sans-serif;
+}
+
+
+@media only screen and (min-width: 960px) {
+  /* styles for browsers larger than 960px; */
+}
+@media only screen and (min-width: 1440px) {
+  /* styles for browsers larger than 1440px; */
+}
+@media only screen and (min-width: 2000px) {
+  /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width: 480px) {
+  /* styles for mobile browsers smaller than 480px; (iPhone) */
+}
+@media only screen and (device-width: 768px) {
+  /* default iPad screens */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: portrait) {
+  /* For portrait layouts only */
+  .heading {
+    font-family: 'Secular One', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .cards {
+    display: flex;
+    width: 100vw;
+    overflow-x: scroll;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+  .card {
+    border-radius: 1rem;
+    box-shadow: -1rem 1rem 1rem rgba(38, 57, 77, 0.5);
+    height: var(--card-height-md);
+    transition: 0.2s;
+    min-width: var(--card-width-md);
+    margin-bottom: 60px;
+    display: flex;
+  }
+  .card:not(:first-child) {
+    margin-left: var(--card-nf-m-md);
+  }
+  .card:first-child {
+    margin-left: var(--card-fc-m-md);
+  }
+
+  .card:not(:last-child):hover,
+  .card:not(:last-child):focus-within {
+    transform: translateY(-1rem);
+  }
+  .card-title {
+    color: black;
+    font-size: 5vw;
+  }
+  .cert-card-m {
+    display: flex;
+    width: var(--card-width-md);
+    height: var(--card-height-md);
+    flex-direction: column;
+    position: relative;
+    min-width: 300px;
+
+    background: white;
+    box-shadow: -1rem 1rem 1rem rgba(38, 57, 77, 0.5);
+    transition: 0.2s;
+    margin-bottom: 60px;
+  }
+
+  .cert-card-m:hover {
+    transform: translateY(-1rem);
+  }
+  .cert-card-m:hover ~ .cert-card-m {
+    transform: translateX(50px);
+  }
+
+  .cert-card-m:not(:first-child) {
+    margin-left: var(--card-nf-m-md);
+  }
+  .cert-card-m:first-child {
+    margin-left: var(--card-fc-m-md);
+  }
+
+  .item-year {
+    color: black;
+    font-size: var(--card-subt-m-lg);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .item-title {
+    color: rgba(black, 0.7);
+    font-size: var(--card-fs-m-lg);
+    font-family: 'Secular One', sans-serif;
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
+  /* For landscape layouts only */
+}
