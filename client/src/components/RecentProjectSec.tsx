@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { RecentProjectProps } from "../../types";
 import { RECENT_PROJECT } from "../constants";
 
-export function RecentProjectSec({ data }: RecentProjectProps) {
+export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
   return (
     <section>
       <Container>
@@ -18,7 +18,11 @@ export function RecentProjectSec({ data }: RecentProjectProps) {
               <div className="cards">
                 {data.map((item, index) => {
                   return (
-                    <div id={index.toString()} className="card">
+                    <div
+                      id={index.toString()}
+                      className="card"
+                      onClick={() => Dialog(item)}
+                    >
                       <div className="card-title m-3">
                         <Row>
                           <Col md={12}>
@@ -49,13 +53,17 @@ export function RecentProjectSec({ data }: RecentProjectProps) {
                 })}
               </div>
             </div>
+
             {/* from lg visible */}
             <Container className="project d-none d-md-block">
               <div className="row row-cols-1 row-cols-md-2 m-0 g-0">
-
                 {data.map((item, index) => {
                   return (
-                    <div className="col d-flex justify-content-center" id={index.toString()}>
+                    <div
+                      className="col d-flex justify-content-center"
+                      id={index.toString()}
+                      onClick={() => Dialog(item)}
+                    >
                       <div className="card p-0 mt-4 card-cust">
                         <div className="card-img-overlay">
                           <div className="card-title">

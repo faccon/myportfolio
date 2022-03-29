@@ -92,7 +92,7 @@ export function CertificationSec({ data }: CerificationProps) {
                           ) : null}
                         </div>
 
-                        <div className="d-flex justify-content-center bottom">
+                        <div className="d-flex justify-content-center bottom-verify">
                           {item.verify ? (
                             <a
                               className="verify-cert"

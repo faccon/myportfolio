@@ -19,6 +19,8 @@
   --lastchild-mb: 20%;
   --padding-4px: 4px;
   --padding-1rem: 1rem;
+  --detail-title-text: 12px;
+  --detail-item-text: 10px
 }
 
 body {
@@ -224,7 +226,7 @@ a:hover {
   background-color: white;
   border-top: 1px solid whitesmoke;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   padding: 0px 30px 10px 30px;
   z-index: 1;
 }
@@ -322,9 +324,14 @@ a:hover {
     text-align: start;
   }
 
+  .close{
+    cursor: pointer;
+  }
+
   .footer {
-    height: 40px;
+    height: calc(var(--footer-height) + 2.5vh);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 0px;
   }
 
   .Nav-text {
@@ -356,6 +363,86 @@ a:hover {
     position: relative;
     left: 0;
     top: -5vh;
+  }
+  .detail-item-container {
+    float: left;
+    margin-top: 2px;
+  }
+  .detail-item {
+    border: gray solid 1px;
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    border-radius: 5px;
+    margin: 0 0.3rem 0.3rem 0;
+    font-size: var(--detail-item-text)
+  }
+  .details-name {
+    font-weight: bold;
+  }
+  .details-name-title{
+    letter-spacing: 2px;
+    font-size: var(--detail-title-text)
+  }
+
+  .details-name .link-a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .details-name .link-a {
+    font-size: small;
+    background: linear-gradient(
+        to right,
+        rgba(100, 200, 200, 1),
+        rgba(100, 200, 200, 1)
+      ),
+      linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+      );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
+
+  .details-name .link-a:hover {
+    background-size: 0 3px, 100% 3px;
+  }
+  .details-links {
+    font-size: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .details-links a {
+    text-decoration: none;
+    color: #18272f;
+    font-weight: 700;
+    position: relative;
+    padding: 0 0 0.5rem 0;
+    margin: 1rem;
+  }
+
+  .details-links a::before {
+    content: '';
+    background-color: hsla(196, 61%, 58%, 0.75);
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 8px;
+    z-index: 0;
+    color: aliceblue;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .details-links a:hover::before {
+    bottom: 0;
+    height: 100%;
   }
 
   .project {
@@ -439,6 +526,14 @@ a:hover {
     left: 50%;
     transform: translateX(-50%);
     z-index: 0;
+  }
+
+  .bottom-verify {
+    position: absolute;
+    bottom: 9%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
   }
 
   .certs .card-cust {
