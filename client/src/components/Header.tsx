@@ -10,7 +10,7 @@ export function Header() {
       className="navbar"
     >
       <Navbar.Brand href="#home" className="nav-logo">
-        B
+        <img src='./favicon.ico' alt="" width='80%' />
       </Navbar.Brand>
       <a href="/">
         <strong>Portfolio</strong>

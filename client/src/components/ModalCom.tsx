@@ -1,8 +1,5 @@
-import { features } from "process";
-import React from "react";
 import { Modal, Col, Row, Container } from "react-bootstrap";
-import { ProjectItemProps, ProjectProps } from "../../types";
-import { DUMMY_DB } from "../shared";
+import { ProjectItemProps } from "../../types";
 
 interface ModalComProps {
   show: boolean;
