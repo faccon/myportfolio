@@ -1,4 +1,3 @@
-import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { RecentProjectProps } from "../../types";
 import { RECENT_PROJECT } from "../constants";

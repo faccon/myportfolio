@@ -12,7 +12,7 @@ import { useEffect, useRef, useState } from "react";
 import { gsap, Power1 } from "gsap";
 import { Container } from "react-bootstrap";
 import { ModalCom } from "./components/ModalCom";
-import { ProjectItemProps, ProjectProps, RecentProjectProps } from "../types";
+import { ProjectItemProps } from "../types";
 
 function App() {
   const loadingRef = useRef(null);
