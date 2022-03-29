@@ -45,9 +45,6 @@ export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
                           )}
                         </div>
                       </div>
-                      {/* <div className="link-a" onClick={vDetailOnClick}>
-                    view details
-                  </div> */}
                     </div>
                   );
                 })}
@@ -64,9 +61,17 @@ export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
                       id={index.toString()}
                       onClick={() => Dialog(item)}
                     >
-                      <div className="card p-0 mt-4 card-cust">
+                      <div className="card p-0 mt-4 card-cust d-flex">
+                        <img
+                          src={item.images.slice(0, 1)[0]}
+                          className="card-img img-overlay image-blurred-edge"
+                          alt=""
+                        />
                         <div className="card-img-overlay">
                           <div className="card-title">
+                            {item.ongoing ? (
+                              <div className="in-progress">in progress</div>
+                            ) : null}
                             <div className="circle">
                               <div className="new-flag">NEW</div>
                             </div>
@@ -85,6 +90,14 @@ export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
                                   cloud
                                 </span>
                               )}
+                              {item.type === "python" ? (
+                                <img
+                                  src={item.Logo}
+                                  alt=""
+                                  width={20}
+                                  height={20}
+                                />
+                              ) : null}
                             </div>
                           </div>
                         </div>

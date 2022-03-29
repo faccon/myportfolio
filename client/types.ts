@@ -4,8 +4,10 @@ interface contributors {
 }
 
 export type ProjectItemProps = {
-  image_url: string
-  bg_img: string
+  scenario?: string | undefined
+  content?: string | undefined
+  ongoing: boolean
+  url?: string
   icon: string | null
   host: string | null
   type: string
@@ -14,6 +16,7 @@ export type ProjectItemProps = {
   Logo?: string
   features: string[]
   contributors?: contributors[]
+  images: string[]
 }
 export type CertItemProps = {
   image_url: string
