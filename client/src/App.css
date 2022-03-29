@@ -130,8 +130,8 @@ a:hover {
 .landing {
   position: absolute;
   background: black;
-  width: 101vw;
-  height: 101vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
   z-index: 2;
@@ -212,6 +212,7 @@ a:hover {
   text-transform: uppercase;
   text-shadow: -3px 1px 5px rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 1);
   font-family: 'Secular One', sans-serif;
+
 }
 
 .footer {
@@ -305,7 +306,7 @@ a:hover {
     margin: 0 auto;
     z-index: 1;
     height: 50px;
-    width: 100vw;
+    width: 100%;
   }
   #DP {
     width: 430px;
@@ -697,9 +698,26 @@ a:hover {
     margin: 0;
     z-index: 1;
     min-height: var(--navbar-height);
+    width: 100%;
+    
   }
+
+  .emboss {
+    font-size: 15.5vw;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    text-shadow: -3px 1px 5px rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 1);
+    font-family: 'Secular One', sans-serif;
+
+  }
+  
+
+  body{
+    overflow-x: hidden
+  }
+
   .section-1 {
-    width: 100vw;
+    width: 100%;
   }
 
   #DP {
@@ -737,7 +755,7 @@ a:hover {
   }
   .cards {
     display: flex;
-    width: 100vw;
+    width: 100%;
     overflow-x: scroll;
     padding-top: 30px;
     margin-bottom: 30px;

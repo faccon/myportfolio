@@ -33,8 +33,8 @@ function App() {
 
   return (
     <>
-      <Header />
       <LandingSec innerRef={loadingRef} />
+      <Header />
       <Container>
         <WpSec />
         <RecentProjectSec data={DUMMY_DB.projects} />
