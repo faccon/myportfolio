@@ -64,8 +64,8 @@ export function ModalCom({ show, toggle, data }: ModalComProps) {
                   </ul>
                 </div>
               </Col>
-              <Col className="m-5 bottom" xs={12}>
-                <div className="g-link d-flex">
+              <Col className="pt-5" xs={12}>
+                <div className="g-link">
                   <a href={data?.url}>
                     {data?.type !== "web"
                       ? "view rep on GitHub"
@@ -76,40 +76,42 @@ export function ModalCom({ show, toggle, data }: ModalComProps) {
             </Col>
 
             {/* Right Column */}
-            <Col className="me-4 ms-4 modal-right">
-              {data?.type !== "python" ? (
-                <>
-                  <img
-                    src={landscape ? landscape[0] : undefined}
-                    alt="landscape"
-                    id="1"
-                    className="img-fluid"
-                  />
-                  {data?.images.slice(1).map((item, index) => {
-                    return (
-                      <Col md={12} className="m-2">
-                        <img
-                          src={item}
-                          alt={item}
-                          id={index.toString()}
-                          className="p-image"
-                        />
-                      </Col>
-                    );
-                  })}
-                </>
-              ) : (
-                <>
-                  <Col>
-                    <div className="mb-3 details-name">{data?.scenario}</div>
-                  </Col>
-                  <Col>
-                    <div className="display-linebreak scenario-content">
-                      <text>{data.content}</text>
-                    </div>
-                  </Col>
-                </>
-              )}
+            <Col className="m0 mt-4 p-0 modal-right">
+              <Container>
+                {data?.type !== "python" ? (
+                  <>
+                    <img
+                      src={landscape ? landscape[0] : undefined}
+                      alt="landscape"
+                      id="1"
+                      className="img-fluid"
+                    />
+                    {data?.images.slice(1).map((item, index) => {
+                      return (
+                        <Col md={12} className="m-2">
+                          <img
+                            src={item}
+                            alt={item}
+                            id={index.toString()}
+                            className="p-image"
+                          />
+                        </Col>
+                      );
+                    })}
+                  </>
+                ) : (
+                  <>
+                    <Col>
+                      <div className="mb-3 details-name">{data?.scenario}</div>
+                    </Col>
+                    <Col>
+                      <div className="display-linebreak scenario-content">
+                        <text>{data.content}</text>
+                      </div>
+                    </Col>
+                  </>
+                )}
+              </Container>
             </Col>
           </Row>
         </Container>

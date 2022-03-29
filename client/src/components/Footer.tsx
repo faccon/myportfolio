@@ -7,12 +7,16 @@ export function Footer() {
       <div className="left">
         <SocialIcon
           style={sIconStyle}
+          target="_blank"
+          rel="noopener noreferrer"
           fgColor="black"
           bgColor="whitesmoke"
           url="https://www.linkedin.com/in/adeniyi-babatunde-88107a1b3/"
         />
         <SocialIcon
           style={sIconStyle}
+          target="_blank"
+          rel="noopener noreferrer"
           fgColor="black"
           bgColor="whitesmoke"
           url="https://github.com/faccon"
@@ -20,6 +24,8 @@ export function Footer() {
         <SocialIcon
           style={sIconStyle}
           fgColor="black"
+          target="_blank"
+          rel="noopener noreferrer"
           network="whatsapp"
           bgColor="whitesmoke"
           url="https://api.whatsapp.com/send?phone=4915218168917"

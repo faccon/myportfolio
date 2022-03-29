@@ -16,11 +16,11 @@
   --card-subt-m-lg: 20px;
   --margin-md-t: 5rem;
   --footer-height: var(--navbar-height);
-  --lastchild-mb: 20%;
+  --lastchild-mb: 5%;
   --padding-4px: 4px;
   --padding-1rem: 1rem;
   --detail-title-text: 12px;
-  --detail-item-text: 12px
+  --detail-item-text: 12px;
 }
 
 body {
@@ -30,7 +30,7 @@ body {
 
 .column-list {
   list-style-position: outside;
-  list-style-type: "-- ";
+  list-style-type: '-- ';
   columns: 100px;
 }
 
@@ -145,7 +145,6 @@ a:hover {
   z-index: 2;
   margin: 0;
   padding: 0;
-
 }
 ::-webkit-scrollbar {
   display: none;
@@ -174,13 +173,11 @@ a:hover {
   margin-left: 1rem;
 }
 
-
 .landing .loading-bottom {
   position: fixed;
   left: 1vh;
   bottom: 5vh;
   margin-left: 1rem;
-
 }
 
 .landing .middle {
@@ -220,7 +217,6 @@ a:hover {
   text-transform: uppercase;
   text-shadow: -3px 1px 5px rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 1);
   font-family: 'Secular One', sans-serif;
-
 }
 
 .in-progress {
@@ -228,7 +224,14 @@ a:hover {
   font-size: 10px;
   right: 15%;
   top: 7.5%;
-  color: rgba(255,255,255,0.6);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #000;
 }
 
 .footer {
@@ -325,7 +328,7 @@ a:hover {
     width: 100%;
   }
   #DP {
-    width: 350px;
+    width: 80vh;
     position: absolute;
     right: 0;
     bottom: 0;
@@ -338,7 +341,7 @@ a:hover {
     text-align: start;
   }
 
-  .close{
+  .close {
     cursor: pointer;
   }
 
@@ -390,9 +393,9 @@ a:hover {
   .details-name {
     font-weight: bold;
   }
-  .details-name-title{
+  .details-name-title {
     letter-spacing: 2px;
-    font-size: var(--detail-title-text)
+    font-size: var(--detail-title-text);
   }
 
   .details-name .link-a {
@@ -523,6 +526,7 @@ a:hover {
   }
   .project .card-cust:hover {
     color: white;
+    cursor: pointer;
   }
 
   .project .card-cust:hover .card-title .circle {
@@ -535,12 +539,12 @@ a:hover {
     height: 300px;
   }
 
-  .img-overlay{
+  .img-overlay {
     transform: translateY(5%);
     max-width: 85%;
     opacity: 0.6;
   }
-  .project .card-cust:hover .img-overlay{
+  .project .card-cust:hover .img-overlay {
     opacity: 1;
     transition: 0.4s ease-in-out;
   }
@@ -549,8 +553,8 @@ a:hover {
     overflow: scroll;
     max-height: 100%;
   }
-  
-  .scenario-content{
+
+  .scenario-content {
     font-size: 12px;
   }
 
@@ -622,16 +626,17 @@ a:hover {
     transform: translateY(-35%);
   }
 
-  .modal-right{
+  .modal-right {
     max-height: 80vh;
     overflow: auto;
+    width: 100%;
   }
 
   /* .modal-right::webkit-scrollbar{
     display: flex;
   } */
 
-  .p-image{
+  .p-image {
     width: 50%;
     float: left;
     padding-right: 8px;
@@ -848,21 +853,19 @@ a:hover {
     z-index: 1;
     min-height: var(--navbar-height);
     width: 100%;
-    
   }
 
   .emboss {
     font-size: 15.5vw;
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
-    text-shadow: -3px 1px 5px rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 1);
+    text-shadow: -3px 1px 5px rgba(0, 0, 0, 0.3),
+      1px 1px 0 rgba(255, 255, 255, 1);
     font-family: 'Secular One', sans-serif;
-
   }
-  
 
-  body{
-    overflow-x: hidden
+  body {
+    overflow-x: hidden;
   }
 
   .section-1 {
