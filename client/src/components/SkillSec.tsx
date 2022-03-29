@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { SkillsSecProps } from "../../types";
 import { SKILLS } from "../constants";

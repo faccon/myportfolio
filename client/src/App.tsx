@@ -7,20 +7,43 @@ import { CertificationSec } from "./components/CertificationSec";
 import { WpSec } from "./components/WpSec";
 import { SkillsSec } from "./components/SkillSec";
 import { WtSec } from "./components/WtSec";
-
-// import { Certifications } from "";
+import { LandingSec } from "./components/LandingSec";
+import { useEffect, useRef } from "react";
+import { gsap, Power1 } from "gsap";
+import { Container } from "react-bootstrap";
 
 function App() {
+  const loadingRef = useRef(null);
+
+  useEffect(() => {
+    const t1 = gsap.timeline({ defaults: { ease: Power1.easeOut } });
+
+    t1.to(document.body, {
+      overflow: "hidden",
+    }).to(loadingRef.current, {
+      y: "-100%",
+      duration: 0.4,
+      delay: 2,
+    });
+
+    t1.to(document.body, {
+      overflow: "scroll",
+    });
+  }, []);
+
   return (
-    <div>
+    <>
       <Header />
+      <LandingSec innerRef={loadingRef} />
+      <Container>
+        <WpSec />
+        <RecentProjectSec data={DUMMY_DB.projects} />
+        <CertificationSec data={DUMMY_DB.certifications} />
+        <SkillsSec data={DUMMY_DB.skills} />
+        <WtSec />
+      </Container>
       <Footer />
-      <WpSec />
-      <RecentProjectSec data={DUMMY_DB.projects} />
-      <CertificationSec data={DUMMY_DB.certifications} />
-      <SkillsSec data={DUMMY_DB.skills} />
-      <WtSec />
-    </div>
+    </>
   );
 }
 

@@ -1,0 +1,8 @@
+---
+applications:
+- path: .
+  name: portfolio
+  random-route: true
+  memory: 128M
+  buildpack: nodejs_buildpack 
+  instances: 1

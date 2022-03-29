@@ -1,7 +1,5 @@
-import React from "react";
-
 export const sIconStyle = {
-  height: "35px",
-  width: "35px",
+  height: "30px",
+  width: "30px",
   marginRight: "20px",
 };

@@ -14,7 +14,7 @@ export function RecentProjectSec({ data }: RecentProjectProps) {
         </Row>
         <Row sm={12} xs={12} className="cardrow">
           <>
-            <div className="card-col d-lg-none">
+            <div className="card-col d-sm-none">
               <div className="cards">
                 {data.map((item, index) => {
                   return (
@@ -50,12 +50,13 @@ export function RecentProjectSec({ data }: RecentProjectProps) {
               </div>
             </div>
             {/* from lg visible */}
-            <Container className="project d-none d-lg-block">
-              <div className="row row-cols-1 row-cols-md-2 row-content">
+            <Container className="project d-none d-md-block">
+              <div className="row row-cols-1 row-cols-md-2 m-0 g-0">
+
                 {data.map((item, index) => {
                   return (
-                    <div className="col" id={index.toString()}>
-                      <div className="card p-0 mt-5 card-cust">
+                    <div className="col d-flex justify-content-center" id={index.toString()}>
+                      <div className="card p-0 mt-4 card-cust">
                         <div className="card-img-overlay">
                           <div className="card-title">
                             <div className="circle">

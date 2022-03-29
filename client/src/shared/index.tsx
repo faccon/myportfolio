@@ -69,34 +69,34 @@ export const DUMMY_DB = {
   certifications: [
     {
       name: "Full Stack Cloud Developer",
-      image_url: "/assets/images/certificates/GMP.png",
+      image_url: "/images/certificates/GMP.png",
       verify: "https://coursera.org/verify/professional-cert/UEGVCEZFG582",
       author: "IBM",
-      Logo: "/assets/images/certificates/IBM.png",
+      Logo: "/images/certificates/IBM.png",
       badge: null,
     },
 
     {
       name: "IT Automation with Python",
-      image_url: "/assets/images/certificates/GMP.png",
+      image_url: "/images/certificates/GMP.png",
       verify: "https://coursera.org/verify/professional-cert/UN2U8XRQFEK5",
       author: "Google",
-      Logo: "../../public/assets/images/certificates/Google.png",
-      badge: "/assets/images/certificates/GIPT_BADGE.png",
+      Logo: "images/certificates/Google.png",
+      badge: "/images/certificates/GIPT_BADGE.png",
     },
 
     {
       name: "Project Management Professional",
-      image_url: "/assets/images/certificates/GMP.png",
+      image_url: "/images/certificates/GMP.png",
       verify: "https://coursera.org/verify/professional-cert/2TB5WW2WMVSQ",
       author: "Google",
-      Logo: "/public/assets/images/certificates/Google.png",
-      badge: "/assets/images/certificates/GPMP_BADGE.png",
+      Logo: "/images/certificates/Google.png",
+      badge: "/images/certificates/GPMP_BADGE.png",
     },
 
     {
       name: "Msc. Metallic Materials Technology",
-      image_url: "/assets/images/Msc.png",
+      image_url: "/images/Msc.png",
       verify: null,
       author: "TU Bergakademie Freiberg, Germany",
       badge: null,

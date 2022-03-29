@@ -9,7 +9,7 @@ export function CertificationSec({ data }: CerificationProps) {
       <Container>
         <Row>
           <Col md={12}>
-            <p className="heading pt-3"> {CERTIFICATION} </p>
+            <p className="heading pt-5"> {CERTIFICATION} </p>
           </Col>
         </Row>
         <Row sm={12} xs={12} className="cardrow">

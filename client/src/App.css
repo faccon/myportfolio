@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Secular+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Secular+One&display=swap');
+
 :root {
   --navbar-height: 6vh;
   --navbar-color: var(--underline-color);
@@ -20,8 +23,21 @@
 
 body {
   background-color: whitesmoke;
+  overflow-x: hidden;
 }
 
+.h-20 {
+  height: 20%;
+}
+.h-15 {
+  height: 15%;
+}
+.h-80 {
+  height: 80%;
+}
+.h-85 {
+  height: 85%;
+}
 .nav-item-right {
   padding-right: 30px;
   padding-left: 10px;
@@ -31,11 +47,6 @@ body {
   font-size: 20px;
   font-weight: bold;
   padding-left: 10px;
-}
-
-.Nav-text {
-  font-size: 5vw;
-  color: black;
 }
 
 .nav-toggle {
@@ -48,15 +59,6 @@ body {
 .navbar-toggler-icon:focus {
   outline: none;
   box-shadow: none;
-}
-
-.navbar {
-  color: black;
-  background-color: white;
-  padding: 0 var(--padding-1rem) 0 var(--padding-1rem);
-  margin: 0;
-  z-index: 1;
-  min-height: var(--navbar-height);
 }
 
 a {
@@ -125,10 +127,78 @@ a:hover {
   padding: 0 0 1rem 0;
 }
 
+.landing {
+  position: absolute;
+  background: black;
+  width: 101vw;
+  height: 101vh;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.welcome {
+  font-size: 2vw;
+  font-family: 'Poppins', sans-serif;
+}
+
+.landing .bottom .wait {
+  font-size: rem;
+  font-family: 'Secular One', sans-serif;
+}
+
+.landing .landing-logo {
+  color: white;
+  font-size: 12px;
+}
+
+.landing .top {
+  position: fixed;
+  top: 5%;
+  left: 0;
+  font-size: 2rem;
+  margin-left: 1rem;
+}
+
+
+.landing .loading-bottom {
+  position: fixed;
+  left: 1vh;
+  bottom: 5vh;
+  margin-left: 1rem;
+
+}
+
+.landing .middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 200px;
+}
+
+.faint {
+  font-size: 1.2rem;
+  letter-spacing: 0.2rem;
+  color: gray;
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+
 .section-1 {
   background-color: white;
   width: 100%;
   height: calc(100vh - (var(--navbar-height)));
+  justify-self: center;
+  display: flex;
+  margin: 0 auto;
 }
 
 .section-2 {
@@ -153,18 +223,20 @@ a:hover {
   background-color: white;
   border-top: 1px solid whitesmoke;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   padding: 0px 30px 10px 30px;
+  z-index: 1;
 }
 
 .left span {
-  align-self: center;
-  position: relative;
-  bottom: -10px;
   border: 1px solid transparent;
   border-radius: 50%;
   padding: 5px;
   background-color: whitesmoke;
+  font-size: 15px;
+  position: relative;
+  left: 0px;
+  top: 3px;
 }
 
 .test-1 {
@@ -173,6 +245,9 @@ a:hover {
 
 .test-2 {
   background-color: aquamarine;
+}
+.test-3 {
+  background-color: #54b3d6;
 }
 .card-body .bottom-flags {
   position: absolute;
@@ -203,7 +278,7 @@ a:hover {
   padding: 0.2rem 0.5rem 0.2rem 0.5rem;
   border-radius: 5px;
   margin: 0 0.3rem 0.3rem 0;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .work-together {
@@ -221,9 +296,196 @@ a:hover {
   font-family: 'Secular One', sans-serif;
 }
 
-
 @media only screen and (min-width: 960px) {
   /* styles for browsers larger than 960px; */
+  .navbar {
+    color: black;
+    background-color: white;
+    padding: 0 var(--padding-1rem) 0 var(--padding-1rem);
+    margin: 0 auto;
+    z-index: 1;
+    height: 50px;
+    width: 100vw;
+  }
+  #DP {
+    width: 430px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+
+  .heading {
+    font-family: 'Secular One', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: start;
+  }
+
+  .footer {
+    height: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .Nav-text {
+    font-size: 2.5vh;
+    color: black;
+  }
+
+  .h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 3.5vh;
+    color: black;
+  }
+
+  .h3 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 0.5vw;
+    font-size: 3vh;
+    letter-spacing: 0.1rem;
+    color: rgba(0, 0, 0, 0.3);
+  }
+  .emboss {
+    font-size: 14vw;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    text-shadow: -4px 1px 5px rgba(0, 0, 0, 0.3),
+      1px 1px 0 rgba(255, 255, 255, 1);
+    font-family: 'Secular One', sans-serif;
+    position: relative;
+    left: 0;
+    top: -5vh;
+  }
+
+  .project {
+    width: 100vw;
+  }
+
+  .project .card {
+    border-radius: 0;
+    width: 400px;
+    height: 300px;
+  }
+  .card-title {
+    color: aliceblue;
+    font-size: 2vw;
+  }
+
+  .card-title .circle {
+    border: 1px solid transparent;
+    background-color: black;
+    height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+  }
+
+  .card-title .new-flag {
+    color: white;
+    font-size: 0.5rem;
+    font-family: 'Secular One', sans-serif;
+    text-align: center;
+  }
+
+  .item-year {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 50%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .item-title {
+    color: rgba(white, 0.7);
+    font-size: 70%;
+    font-family: 'Secular One', sans-serif;
+  }
+
+  .card-body .bottom-flags {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 100%;
+  }
+
+  .project .card-cust {
+    background-color: black;
+    border: 0;
+    width: 400px;
+    transition: 0.3s ease-in-out;
+  }
+  .project .card-cust:hover {
+    color: white;
+  }
+
+  .project .card-cust:hover .card-title .circle {
+    border: 2px solid white;
+  }
+
+  .card {
+    border-radius: 0;
+    width: 250px;
+    height: 300px;
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .certs .card-cust {
+    background-color: black;
+    border: 0;
+    transition: 0.2s ease-in-out;
+  }
+
+  .certs .card-cust:hover {
+    transform: scale(1.1, 1.1);
+  }
+
+  .certs-cust {
+    padding-top: 2%;
+    padding-bottom: 5%;
+    /* margin-left: var(--lef-mp-md); */
+  }
+
+  .certs .card-cust:hover .verify-cert {
+    color: whitesmoke;
+  }
+
+  .line {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    z-index: 3;
+    width: 0px;
+    height: 2px;
+    transform: translate(-50%);
+    background: rgb(0, 154, 217);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 154, 217, 1) 0%,
+      rgba(217, 147, 0, 1) 65%,
+      rgba(255, 186, 0, 1) 100%
+    );
+    transition: 0.6s ease-out;
+  }
+
+  .certs .card-cust:hover .line {
+    width: 40px;
+    transition: 00.4s ease-out;
+  }
+
+  .note {
+    transform: translateY(-35%);
+  }
 }
 @media only screen and (min-width: 1440px) {
   /* styles for browsers larger than 1440px; */
@@ -236,10 +498,237 @@ a:hover {
 }
 @media only screen and (device-width: 768px) {
   /* default iPad screens */
+
+  .navbar {
+    color: black;
+    background-color: white;
+    padding: 0 var(--padding-1rem) 0 var(--padding-1rem);
+    margin: 0;
+    z-index: 1;
+    height: 50px;
+  }
+  #DP {
+    max-width: 350px;
+    position: absolute;
+    bottom: 15%;
+  }
+
+  .heading {
+    font-family: 'Secular One', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: start;
+  }
+
+  .footer {
+    height: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+
+  .Nav-text {
+    font-size: 2.5vh;
+    color: black;
+  }
+
+  .h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 3.5vh;
+    color: black;
+  }
+
+  .h3 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 0.5vw;
+    font-size: 3vh;
+    letter-spacing: 0.1rem;
+    color: rgba(0, 0, 0, 0.3);
+  }
+  .emboss {
+    font-size: 14vw;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    text-shadow: -4px 1px 5px rgba(0, 0, 0, 0.3),
+      1px 1px 0 rgba(255, 255, 255, 1);
+    font-family: 'Secular One', sans-serif;
+    position: relative;
+    left: 0;
+    top: 5vh;
+  }
+
+  .project {
+    width: 100vw;
+  }
+
+  .project .card {
+    border-radius: 0;
+    width: 400px;
+    height: 300px;
+  }
+  .card-title {
+    color: aliceblue;
+    font-size: 2vw;
+  }
+
+  .card-title .circle {
+    border: 1px solid transparent;
+    background-color: black;
+    height: 30px;
+    border-radius: 50%;
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+  }
+
+  .card-title .new-flag {
+    color: white;
+    font-size: 0.5rem;
+    font-family: 'Secular One', sans-serif;
+    text-align: center;
+  }
+
+  .item-year {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 50%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .item-title {
+    color: rgba(white, 0.7);
+    font-size: 70%;
+    font-family: 'Secular One', sans-serif;
+  }
+
+  .card-body .bottom-flags {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    width: 100%;
+  }
+
+  .project .card-cust {
+    background-color: black;
+    border: 0;
+    width: 400px;
+    transition: 0.3s ease-in-out;
+  }
+  .project .card-cust:hover {
+    color: white;
+  }
+
+  .project .card-cust:hover .card-title .circle {
+    border: 2px solid white;
+  }
+
+  .card {
+    border-radius: 0;
+    width: 250px;
+    height: 300px;
+  }
+
+  .bottom {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+
+  .certs .card-cust {
+    background-color: black;
+    border: 0;
+    transition: 0.2s ease-in-out;
+  }
+
+  .certs .card-cust:hover {
+    transform: scale(1.1, 1.1);
+  }
+
+  .certs-cust {
+    padding-top: 2%;
+    padding-bottom: 5%;
+    /* margin-left: var(--lef-mp-md); */
+  }
+
+  .certs .card-cust:hover .verify-cert {
+    color: whitesmoke;
+  }
+
+  .line {
+    position: absolute;
+    bottom: 0%;
+    left: 50%;
+    z-index: 3;
+    width: 0px;
+    height: 2px;
+    transform: translate(-50%);
+    background: rgb(0, 154, 217);
+    background: linear-gradient(
+      90deg,
+      rgba(0, 154, 217, 1) 0%,
+      rgba(217, 147, 0, 1) 65%,
+      rgba(255, 186, 0, 1) 100%
+    );
+    transition: 0.6s ease-out;
+  }
+
+  .certs .card-cust:hover .line {
+    width: 40px;
+    transition: 00.4s ease-out;
+  }
+
+  .note {
+    transform: translateY(-20%);
+  }
 }
+
 /* different techniques for iPad screening */
 @media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* For portrait layouts only */
+  .navbar {
+    color: black;
+    background-color: white;
+    padding: 0 var(--padding-1rem) 0 var(--padding-1rem);
+    margin: 0;
+    z-index: 1;
+    min-height: var(--navbar-height);
+  }
+  .section-1 {
+    width: 100vw;
+  }
+
+  #DP {
+    width: 90vw;
+  }
+
+  .Nav-text {
+    font-size: 5vw;
+    color: black;
+  }
+
+  .h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+  }
+
+  .h3 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 0.5vw;
+    margin-top: 1rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color: gray;
+    margin: 0;
+    padding: 0 0 1rem 0;
+  }
+
   .heading {
     font-family: 'Secular One', sans-serif;
     font-size: 25px;
