@@ -1,11 +1,18 @@
 export const CERTIFICATION = "Certifications";
+export const NAME = 'Babatunde Adeniyi';
+export const SPECIALIZATION = 'Full Stack Developer';
+export const FIELDS = 'Website, Mobile and Cloud developer';
+export const ABOUT_ME = 'Over the years I have been able to professionalise myself as a mobile, web and cloud developer';
 export const RECENT_PROJECT = "Recent project";
 export const SKILLS = "Skills";
 export const LUWT = "Let's work together";
 export const WEB = "WEB";
+export const GITHUB = "GitHub";
+export const HIRE_ME = "Hire me!";
 export const MOBILE = "MOBILE";
 export const AUTOMATION = "AUTOMATION";
 export const SCENARIO = "SCENARIO";
+export const DOWNLOAD_RESUME = 'Download Resume'
 export const SCENARIO_CONTENT = `
 As an Automation engineer in a fruits store, I need to develop a system that will update the catalog information with data provided by our suppliers. The suppliers will send the data as large images with an associated description of the products in two files (.TIF for the image and .txt for the description). However, these images need to be converted to smaller jpeg image sizes and the text needs to be turned into an HTML file that shows the image and the product description. The contents of the HTML file need to be uploaded to a web service that is already running using Django. Additionally, I need to gather the name and weight of all fruits from the .txt files. and use a Python request to upload it to your Django server.
 Since this will be a large list, automation would be the best bet! I would probably make typos just like thiss one if I do the renaming and resizing one after the other and moreover, it would be so boring.

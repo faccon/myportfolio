@@ -22,26 +22,23 @@ export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
                       className="card"
                       onClick={() => Dialog(item)}
                     >
-                      <div className="card-title m-3">
-                        <Row>
-                          <Col md={12}>
-                            <div className="item-year ">{item.year}</div>
-                          </Col>
-                        </Row>
-                        <Row>
-                          <Col xs={7} sm={12} md={12}>
-                            <div className="item-title">{item.title}</div>
-                          </Col>
-                        </Row>
-                      </div>
-                      <div className="card-body">
-                        <div className="bottom-flags">
-                          <span className="material-icons p-1">
-                            {item.icon}
-                          </span>
-                          {item.type !== "WEB" ? null : (
-                            <span className="material-icons-round">cloud</span>
-                          )}
+                      <img
+                        src={item.images.slice(1, 2)[0]}
+                        className="card-img img-overlay m-0"
+                        alt=""
+                      />
+                      <div className="card-img-overlay m-0 p-0">
+                        <div className="card-title card-title-c">
+                          <Row>
+                            <Col md={12}>
+                              <div className="item-year ">{item.year}</div>
+                            </Col>
+                          </Row>
+                          <Row>
+                            <Col xs={12} sm={12} md={12}>
+                              <div className="item-title m-0">{item.title}</div>
+                            </Col>
+                          </Row>
                         </div>
                       </div>
                     </div>
@@ -75,7 +72,7 @@ export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
                               <div className="new-flag">NEW</div>
                             </div>
                             <div className="item-year">{item.year}</div>
-                            <Col md={5}>
+                            <Col md={8}>
                               <div className="item-title">{item.title}</div>
                             </Col>
                           </div>

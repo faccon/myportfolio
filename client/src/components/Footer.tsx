@@ -23,6 +23,14 @@ export function Footer() {
         />
         <SocialIcon
           style={sIconStyle}
+          target="_blank"
+          rel="noopener noreferrer"
+          fgColor="black"
+          bgColor="whitesmoke"
+          url="mailto:adeniyi.germany@gmail.com"
+        />
+        <SocialIcon
+          style={sIconStyle}
           fgColor="black"
           target="_blank"
           rel="noopener noreferrer"
