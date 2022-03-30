@@ -10,12 +10,10 @@ export function Header() {
       variant="light"
       className="navbar"
     >
-      <Navbar.Brand href="#home" className="nav-logo">
+      <Navbar.Brand className="nav-logo">
         <img src="./favicon.ico" alt="" width="80%" />
       </Navbar.Brand>
-      <a href="/">
         <strong>{NAME}</strong>
-      </a>
       <Navbar.Toggle
         className="nav-toggle"
         aria-controls="responsive-navbar-nav"

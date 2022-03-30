@@ -35,7 +35,7 @@ export const DUMMY_DB = {
     {
       url: "http://portfolio.babdevs.com",
       title: "Portfolio - I am a developer",
-      images: ["/images/self/img-md.png"],
+      images: ["/images/self/img-md.png", "/images/self/img3.jpg","/images/self/img2.jpg"],
       year: 2022,
       ongoing: false,
       icon: "language",
