@@ -1,5 +1,5 @@
 import { Col, Container, Row } from "react-bootstrap";
-import { ABOUT_ME, DOWNLOAD_RESUME, FIELDS, NAME, SPECIALIZATION } from "../constants";
+import { ABOUT_ME, DOWNLOAD_RESUME, FIELDS, NAME, RESUME_LINK, SPECIALIZATION } from "../constants";
 
 export function WpSec() {
   return (
@@ -29,7 +29,7 @@ export function WpSec() {
             </Col>
             <Col>
               <div className="g-link">
-                <a href="#project">{DOWNLOAD_RESUME}</a>
+                <a href={RESUME_LINK}>{DOWNLOAD_RESUME}</a>
               </div>
             </Col>
           </Col>

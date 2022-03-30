@@ -1,4 +1,5 @@
 import { SocialIcon } from "react-social-icons";
+import { GITHUB_URL, LINKEDIN, MAILTO, TEL, WHATSAPP_URL } from "../constants";
 import { sIconStyle } from "../style";
 
 export function Footer() {
@@ -11,7 +12,7 @@ export function Footer() {
           rel="noopener noreferrer"
           fgColor="black"
           bgColor="whitesmoke"
-          url="https://www.linkedin.com/in/adeniyi-babatunde-88107a1b3/"
+          url={LINKEDIN}
         />
         <SocialIcon
           style={sIconStyle}
@@ -19,7 +20,7 @@ export function Footer() {
           rel="noopener noreferrer"
           fgColor="black"
           bgColor="whitesmoke"
-          url="https://github.com/faccon"
+          url={GITHUB_URL}
         />
         <SocialIcon
           style={sIconStyle}
@@ -27,7 +28,7 @@ export function Footer() {
           rel="noopener noreferrer"
           fgColor="black"
           bgColor="whitesmoke"
-          url="mailto:adeniyi.germany@gmail.com"
+          url={MAILTO}
         />
         <SocialIcon
           style={sIconStyle}
@@ -36,9 +37,9 @@ export function Footer() {
           rel="noopener noreferrer"
           network="whatsapp"
           bgColor="whitesmoke"
-          url="https://api.whatsapp.com/send?phone=4915218168917"
+          url={WHATSAPP_URL}
         />
-        <a href="tel:+4915218168917">
+        <a href={TEL}>
           <span className="material-icons-outlined">call</span>
         </a>
       </div>

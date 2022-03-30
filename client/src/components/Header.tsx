@@ -1,5 +1,5 @@
 import { Nav, Navbar } from "react-bootstrap";
-import { GITHUB, HIRE_ME, NAME } from "../constants";
+import { GITHUB, GITHUB_URL, HIRE_ME, MAILTO, NAME } from "../constants";
 
 export function Header() {
   return (
@@ -20,10 +20,10 @@ export function Header() {
       />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="justify-content-end ms-auto nav-item-right">
-          <Nav.Link href="https://github.com/faccon" className="Nav-text">
+          <Nav.Link href={GITHUB_URL} className="Nav-text">
             {GITHUB}
           </Nav.Link>
-          <Nav.Link href="mailto:adeniyi.germany@gmail.com" className="Nav-text">
+          <Nav.Link href={MAILTO} className="Nav-text">
             {HIRE_ME}
           </Nav.Link>
         </Nav>
