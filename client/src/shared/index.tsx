@@ -102,7 +102,7 @@ export const DUMMY_DB = {
   certifications: [
     {
       name: "Full Stack Cloud Developer",
-      image_url: "/images/certificates/GMP.png",
+      pdf_url: "https://drive.google.com/file/d/1Ubg_BZ_Qeq7fdLoKevLXUofZwcGkMqvY",
       verify: "https://coursera.org/verify/professional-cert/UEGVCEZFG582",
       author: "IBM",
       Logo: "/images/certificates/IBM.png",
@@ -111,7 +111,7 @@ export const DUMMY_DB = {
 
     {
       name: "IT Automation with Python",
-      image_url: "/images/certificates/GMP.png",
+      pdf_url: "https://drive.google.com/file/d/1r7MURUPj4uKSlo-1TVb2cCB4IBGHbwo0",
       verify: "https://coursera.org/verify/professional-cert/UN2U8XRQFEK5",
       author: "Google",
       Logo: "images/certificates/Google.png",
@@ -120,7 +120,7 @@ export const DUMMY_DB = {
 
     {
       name: "Project Management Professional",
-      image_url: "/images/certificates/GMP.png",
+      pdf_url: "https://drive.google.com/file/d/1o_TRcUcFALFH515_QR_6NcC_UOThnbft",
       verify: "https://coursera.org/verify/professional-cert/2TB5WW2WMVSQ",
       author: "Google",
       Logo: "/images/certificates/Google.png",
@@ -130,15 +130,15 @@ export const DUMMY_DB = {
     {
       name: "Msc. Metallic Materials Technology",
       badge: "/images/certificates/edu.png",
-      image_url: "/images/certificates/edu.png",
-      verify: null,
+      pdf_url: "https://drive.google.com/file/d/1MWIVQtk_Ic0--kCgkBv_OG_7RZBaqVkJ",
+      verify: '',
       author: "TU Freiberg, Germany",
       Logo: null,
     },
   ],
   skills: [
-    "React",
     // IBM CLOUD
+    "React",
     "HTML",
     "CSS",
     "JavaScript",

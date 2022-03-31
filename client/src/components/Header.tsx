@@ -4,7 +4,7 @@ import { GITHUB, GITHUB_URL, HIRE_ME, MAILTO, NAME } from "../constants";
 export function Header() {
   return (
     <Navbar
-      sticky="top"
+      fixed="top"
       collapseOnSelect
       expand="md"
       variant="light"

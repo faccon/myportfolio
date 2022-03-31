@@ -1,11 +1,27 @@
+import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-import { ABOUT_ME, DOWNLOAD_RESUME, FIELDS, NAME, RESUME_LINK, SPECIALIZATION } from "../constants";
+import {
+  ABOUT_ME,
+  CV,
+  DOWNLOAD_RESUME,
+  FIELDS,
+  NAME,
+  RESUME_LINK,
+  SPECIALIZATION,
+} from "../constants";
+import { Viewer } from "./Viewer";
 
 export function WpSec() {
+  const [showModal, setshowModal] = useState<boolean>(false);
+
+  function toggleModal() {
+    setshowModal(!showModal);
+  }
+
   return (
     <section className="section-1 mb-5">
       <Container className="h-100">
-        <Row className="m-0 h-50">
+        <Row className="m-0 p-0 h-50 d-flex">
           <Col>
             <div className="emboss">DEVELOPER</div>
           </Col>
@@ -13,8 +29,8 @@ export function WpSec() {
             <img src="images/DP.png" alt="dp" id="DP" />
           </Col>
         </Row>
-        <Row className="align-content-center note">
-          <Col sm={12} md={7}>
+        <Row className="align-content-center h-50 note">
+          <Col sm={12} md={7} className="h-100">
             <Col>
               <p className="h3">{NAME}</p>
             </Col>
@@ -29,20 +45,21 @@ export function WpSec() {
             </Col>
             <Col>
               <div className="g-link">
-                <a href={RESUME_LINK}>{DOWNLOAD_RESUME}</a>
+                <span onClick={toggleModal}>{DOWNLOAD_RESUME}</span>
               </div>
             </Col>
           </Col>
 
-          <Col md={5} className="m-0 p-0">
+          <Col md={5} className="m-0 h-100 p-0 align-items-center d-flex">
             <img
-              className="d-none d-md-block"
+              className="d-none d-md-block img-fluid"
               src="images/DP.png"
               alt="dp"
               id="DP"
             />
           </Col>
         </Row>
+        <Viewer title={CV} verify='' url={RESUME_LINK} show={showModal} onHide={toggleModal} />
       </Container>
     </section>
   );

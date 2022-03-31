@@ -19,13 +19,22 @@ export type ProjectItemProps = {
   images: string[]
 }
 export type CertItemProps = {
-  image_url: string
+  pdf_url: string
   name: string
-  verify: string | null
+  verify: string
   author: string
   Logo: string | null
   badge: string | null
 }
+
+export interface ViewerProps {
+  show: boolean;
+  onHide: () => void;
+  url: string;
+  verify: string;
+  title: string;
+}
+
 
 export type SkillItemProps = string[]
 

@@ -1,14 +1,26 @@
+import { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { CerificationProps } from "../../types";
 import { CERTIFICATION } from "../constants";
+import { Viewer } from "./Viewer";
 
 export function CertificationSec({ data }: CerificationProps) {
+  const [showModal, setshowModal] = useState<boolean>(false);
+  const [item, setItem] = useState<string[]>([]);
+
+  function toggleModal(item: string[]) {
+    setItem(item);
+    setshowModal(!showModal);
+  }
+
   return (
     <section>
       <Container>
         <Row>
           <Col md={12}>
-            <p className="heading mt-5 d-flex justify-content-center"> {CERTIFICATION} </p>
+            <p className="heading mt-5 d-flex justify-content-center">
+              {CERTIFICATION}
+            </p>
           </Col>
         </Row>
         <Row sm={12} xs={12} className="cardrow">
@@ -16,43 +28,56 @@ export function CertificationSec({ data }: CerificationProps) {
             <div className="cards">
               {data.map((item, index) => {
                 return (
-                  <div id={index.toString()} className=" card cert-card-m">
-                    <div className="card-title">
-                      <Col xs={6} sm={6} md={12}>
-                        <div className="item-title-cert ps-3">{item.name}</div>
-                      </Col>
-                      <Col sm={12} md={12}>
-                        <div className="item-year-cert ps-3">
-                          By: {item.author}
-                        </div>
-                      </Col>
-                    </div>
-                    <div className="card-body">
-                      <Col sm={12} className="m-4 p-4 last-child">
-                        {item.badge ? (
-                          <img
-                            src={item.badge}
-                            alt="certified"
-                            width="90px"
-                            height="90px"
-                            
-                          />
-                        ) : null}
-                      </Col>
+                  <>
+                    <div
+                      id={index.toString()}
+                      onClick={() =>
+                        toggleModal([
+                          item.pdf_url,
+                          item.name,
+                          item.verify,
+                        ])
+                      }
+                      className=" card cert-card-m"
+                    >
+                      <div className="card-title">
+                        <Col xs={6} sm={6} md={12}>
+                          <div className="item-title-cert ps-3">
+                            {item.name}
+                          </div>
+                        </Col>
+                        <Col sm={12} md={12}>
+                          <div className="item-year-cert ps-3">
+                            By: {item.author}
+                          </div>
+                        </Col>
+                      </div>
+                      <div className="card-body">
+                        <Col sm={12} className="m-4 p-4 last-child">
+                          {item.badge ? (
+                            <img
+                              src={item.badge}
+                              alt="certified"
+                              width="90px"
+                              height="90px"
+                            />
+                          ) : null}
+                        </Col>
 
-                      <div className="bottom-flags">
-                        {/* <span className="material-icons p-1">{item.icon}</span> */}
-                        {item.Logo ? (
-                          <img
-                            src={item.Logo}
-                            alt={item.name}
-                            width={item.author === "IBM" ? "50px" : "40px"}
-                            height={item.author === "IBM" ? "35px" : "40px"}
-                          />
-                        ) : null}
+                        <div className="bottom-flags">
+                          {/* <span className="material-icons p-1">{item.icon}</span> */}
+                          {item.Logo ? (
+                            <img
+                              src={item.Logo}
+                              alt={item.name}
+                              width={item.author === "IBM" ? "50px" : "40px"}
+                              height={item.author === "IBM" ? "35px" : "40px"}
+                            />
+                          ) : null}
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </>
                 );
               })}
             </div>
@@ -114,6 +139,13 @@ export function CertificationSec({ data }: CerificationProps) {
             </div>
           </Container>
         </Row>
+        <Viewer
+          url={item[0]}
+          title={item[1]}
+          verify={item[2]}
+          show={showModal}
+          onHide={() => toggleModal([])}
+        />
       </Container>
     </section>
   );

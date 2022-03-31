@@ -24,19 +24,19 @@ export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
                     >
                       <img
                         src={item.images.slice(1, 2)[0]}
-                        className="card-img img-overlay m-0"
+                        className="card-img img-overlay-sm m-0"
                         alt=""
                       />
                       <div className="card-img-overlay m-0 p-0">
                         <div className="card-title card-title-c">
                           <Row>
                             <Col md={12}>
-                              <div className="item-year ">{item.year}</div>
+                              <div className="item-yearsm">{item.year}</div>
                             </Col>
                           </Row>
                           <Row>
                             <Col xs={12} sm={12} md={12}>
-                              <div className="item-title m-0">{item.title}</div>
+                              <div className="item-title-sm m-0">{item.title}</div>
                             </Col>
                           </Row>
                         </div>

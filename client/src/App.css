@@ -48,9 +48,22 @@ body {
 .h-85 {
   height: 85%;
 }
+
+.navbar {
+  color: black;
+  background-color: white;
+  padding: 0 var(--padding-1rem) 0 var(--padding-1rem);
+  margin: 0 auto;
+  z-index: 2;
+  height: 50px;
+  width: 100%;
+}
+
 .nav-item-right {
   padding-right: 30px;
   padding-left: 10px;
+  background-color: white;
+  width: 100;
 }
 
 .Nav-logo {
@@ -58,6 +71,7 @@ body {
   font-weight: bold;
   padding-left: 10px;
 }
+
 
 .nav-toggle {
   border: 0;
@@ -113,7 +127,6 @@ a:hover {
 }
 
 .g-link {
-  /* background-color: aquamarine; */
   display: flex;
   margin: 0;
   padding-right: 20px;
@@ -217,8 +230,13 @@ a:hover {
   font-size: 14vw;
   color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
-  text-shadow: -3px 1px 5px rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 1);
+  text-shadow: -4px 1px 5px rgba(0, 0, 0, 0.3),
+    1px 1px 0 rgba(255, 255, 255, 1);
   font-family: 'Secular One', sans-serif;
+  position: relative;
+  left: 0;
+  top: -5vh;
+  text-align: center;
 }
 
 .in-progress {
@@ -241,7 +259,7 @@ a:hover {
   bottom: 0;
   left: 0;
   width: 100%;
-  height: var(--footer-height);
+  height: auto;
   background-color: white;
   border-top: 1px solid whitesmoke;
   display: flex;
@@ -318,6 +336,298 @@ a:hover {
   font-family: 'Secular One', sans-serif;
 }
 
+ 
+#DP {
+  width: 70vw;
+}
+
+.section-1 {
+  width: 100%;
+  height: 100%;
+}
+
+
+.p-image {
+  width: 50%;
+  float: left;
+  padding-right: 8px;
+}
+
+.detail-item-container {
+  float: left;
+  margin-top: 2px;
+}
+.detail-item {
+  padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+  margin: 0 0.3rem 0.3rem 0;
+  font-size: var(--detail-item-text);
+}
+.details-name {
+  font-weight: bold;
+}
+.details-name-title {
+  letter-spacing: 2px;
+  font-size: var(--detail-title-text);
+}
+
+.details-name .link-a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.details-name .link-a {
+  font-size: small;
+  background: linear-gradient(
+      to right,
+      rgba(100, 200, 200, 1),
+      rgba(100, 200, 200, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+    );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+}
+
+.details-name .link-a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+.details-links {
+  font-size: 1rem;
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details-links a {
+  text-decoration: none;
+  color: #18272f;
+  font-weight: 700;
+  position: relative;
+  padding: 0 0 0.5rem 0;
+  margin: 1rem;
+}
+
+.details-links a::before {
+  content: '';
+  background-color: hsla(196, 61%, 58%, 0.75);
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  width: 100%;
+  height: 8px;
+  z-index: 0;
+  color: aliceblue;
+  transition: all 0.1s ease-in-out;
+}
+
+.details-links a:hover::before {
+  bottom: 0;
+  height: 100%;
+}
+
+.bottom-row {
+  background-color: #000;
+  max-height: 40vh;
+  overflow-y: scroll;
+}
+
+.bottom-row-white {
+  max-height: 40vh;
+  overflow-y: scroll;
+}
+.scenario-content {
+  font-size: 12px;
+}
+
+.display-linebreak {
+  white-space: pre-line;
+  text-align: justify;
+}
+
+.Nav-text {
+  font-size: 16px;
+  color: black;
+  border-bottom: whitesmoke;
+
+}
+
+.h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: black;
+}
+
+.h3 {
+  font-family: 'Secular One', sans-serif;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+  color: gray;
+  margin: 0;
+  padding: 0 0 1rem 0;
+}
+
+.heading {
+  font-family: 'Secular One', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+}
+.card-title-c {
+  padding: 1rem;
+  background-color: white;
+}
+
+.cards {
+  display: flex;
+  width: 100%;
+  overflow-x: scroll;
+  padding-top: 30px;
+  margin-bottom: 30px;
+}
+.card {
+  border-radius: 20px;
+  box-shadow: -1rem 1rem 1rem rgba(38, 57, 77, 0.5);
+  height: var(--card-height-md);
+  transition: 0.2s;
+  min-width: var(--card-width-md);
+  margin-bottom: 60px;
+  display: flex;
+}
+
+.card-sm {
+  border-radius: 1rem;
+  box-shadow: -1rem 1rem 1rem rgba(38, 57, 77, 0.5);
+  height: var(--card-height-md);
+  transition: 0.2s;
+  min-width: var(--card-width-md);
+  margin-bottom: 60px;
+  display: flex;
+}
+
+.card:not(:first-child) {
+  margin-left: var(--card-nf-m-md);
+}
+.card:first-child {
+  margin-left: var(--card-fc-m-md);
+}
+
+.card:not(:last-child):hover,
+.card:not(:last-child):focus-within {
+  transform: translateY(-1rem);
+}
+.card-title {
+  color: black;
+  font-size: 5vw;
+}
+
+.cert-card-m {
+  border-radius: 2rem;
+  box-shadow: -1rem 1rem 1rem rgba(38, 57, 77, 0.5);
+  height: var(--card-height-md);
+  transition: 0.2s;
+  min-width: var(--card-width-md);
+  margin-bottom: 60px;
+  display: flex;
+  background-color: #000;
+
+}
+
+.cert-card-m:hover {
+  transform: translateY(-1rem);
+}
+.cert-card-m:hover ~ .cert-card-m {
+  transform: translateY(-1rem);
+}
+
+.cert-card-m:not(:first-child) {
+  margin-left: var(--card-nf-m-md);
+}
+.cert-card-m:first-child {
+  margin-left: var(--card-fc-m-md);
+}
+
+.item-year {
+  color: black;
+  font-size: var(--card-subt-m-lg);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.item-title {
+  color: rgba(black, 0.7);
+  font-size: var(--card-fs-m-lg);
+  font-family: 'Secular One', sans-serif;
+  padding-top: 10px;
+}
+
+.viewer-title{
+  font-size: 12px;
+}
+
+.item-year-cert {
+  color: white;
+  font-size: 12px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.item-title-cert {
+  color: white;
+  font-size: 14px;
+  font-family: 'Secular One', sans-serif;
+  padding-top: 20px;
+}
+
+.note {
+  margin: 12px 0 0 0;
+}
+
+.card-title-sm{
+  background-color: white;
+  padding: 10px ;
+}
+
+.item-year-sm {
+  color: black;
+  font-size: var(--card-subt-m-lg);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.item-title-sm {
+  color: black;
+  font-size: var(--card-fs-m-lg);
+  font-family: 'Secular One', sans-serif;
+  padding-top: 10px;
+}
+
+.modal-70w {
+  min-width: 70%;
+}
+
+.modal-90h {
+  min-height: 90vh
+}
+
+.img-overlay-sm {
+  opacity: 0.3;
+  height: 100%;
+  width: 100%;
+  align-self: center;
+  padding: 10px 5px 10px 5px;
+}
+
+
+
 @media only screen and (min-width: 960px) {
   /* styles for browsers larger than 960px; */
   .navbar {
@@ -328,12 +638,12 @@ a:hover {
     z-index: 2;
     height: 50px;
     width: 100%;
+    opacity: 1;
   }
   #DP {
-    width: 70vh;
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    width: 30vw;
+    position: relative;
+    bottom: 1vh;
   }
 
   .heading {
@@ -355,6 +665,7 @@ a:hover {
     height: calc(var(--footer-height) + 2.5vh);
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     padding-bottom: 0px;
+    opacity: 1;
   }
 
   .Nav-text {
@@ -372,12 +683,12 @@ a:hover {
   .h3 {
     font-family: 'Secular One', sans-serif;
     font-size: 0.5vw;
-    font-size: 3vh;
+    font-size: 2.5vh;
     letter-spacing: 0.1rem;
     color: rgba(0, 0, 0, 0.3);
   }
   .emboss {
-    font-size: 145px;
+    font-size: 12vw;
     color: rgba(255, 255, 255, 1);
     text-transform: uppercase;
     text-shadow: -4px 1px 5px rgba(0, 0, 0, 0.3),
@@ -385,7 +696,8 @@ a:hover {
     font-family: 'Secular One', sans-serif;
     position: relative;
     left: 0;
-    top: -5vh;
+    top: 0;
+    text-align: center;
   }
   .detail-item-container {
     float: left;
@@ -439,6 +751,10 @@ a:hover {
     justify-content: center;
   }
 
+  .note{
+    transform: translateY(-50px);
+  }
+
   .details-links a {
     text-decoration: none;
     color: #18272f;
@@ -464,6 +780,13 @@ a:hover {
   .details-links a:hover::before {
     bottom: 0;
     height: 100%;
+  }
+
+  .section-1 {
+    width: 100%;
+    /* height: 100%; */
+    height: calc(100vh - (var(--footer-height)*4));
+    margin: calc((var(--navbar-height))*2) 0 0 0;
   }
 
   .project {
@@ -563,6 +886,7 @@ a:hover {
     max-width: 85%;
     opacity: 0.3;
   }
+
   .project .card-cust:hover .img-overlay {
     opacity: 1;
     transition: 0.4s ease-in-out;
@@ -641,19 +965,10 @@ a:hover {
     transition: 00.4s ease-out;
   }
 
-  .note {
-    transform: translateY(-35%);
-  }
-
   .modal-right {
     max-height: 80vh;
     overflow: auto;
-    /* background-color: #000; */
   }
-
-  /* .modal-right::webkit-scrollbar{
-    display: flex;
-  } */
 
   .p-image {
     width: 50%;
@@ -661,6 +976,7 @@ a:hover {
     padding-right: 8px;
   }
 }
+
 @media only screen and (min-width: 1440px) {
   /* styles for browsers larger than 1440px; */
   .section-1 {
@@ -682,8 +998,9 @@ a:hover {
 
   #DP {
     max-width: 58vh;
-    position: absolute;
+    position: relative;
     bottom: 15%;
+    right: 0;
   }
 
   .project .card {
@@ -705,6 +1022,7 @@ a:hover {
 }
 @media only screen and (max-device-width: 480px) {
   /* styles for mobile browsers smaller than 480px; (iPhone) */
+
 }
 @media only screen and (device-width: 768px) {
   /* default iPad screens */
@@ -720,8 +1038,8 @@ a:hover {
   #DP {
     max-width: 300px;
     position: absolute;
-    bottom: 15%;
-    right: 0;
+    top: 40%;
+    right: 5%;
   }
   .cards {
     display: flex;
@@ -741,6 +1059,10 @@ a:hover {
     margin: auto;
   }
 
+  .section-1 {
+    height: 80vh;
+    margin: 10vh auto;
+  }
   .heading {
     font-family: 'Secular One', sans-serif;
     font-size: 25px;
@@ -761,17 +1083,18 @@ a:hover {
   .h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    font-size: 3vh;
+    font-size: 13px;
     color: black;
   }
 
   .h3 {
     font-family: 'Secular One', sans-serif;
     font-size: 0.5vw;
-    font-size: 2.7vh;
+    font-size: 12px;
     letter-spacing: 0.1rem;
     color: rgba(0, 0, 0, 0.3);
   }
+
   .emboss {
     font-size: 14vw;
     color: rgba(255, 255, 255, 1);
@@ -784,21 +1107,22 @@ a:hover {
     top: 5vh;
   }
 
-  .project {
+  /* .project {
     width: 100vw;
-  }
+  } */
 
   .project .card {
     border-radius: 0;
     width: auto;
     height: 250px;
   }
+
   .card-title {
     color: aliceblue;
     font-size: 2vw;
   }
 
-  .card-title .circle {
+  /* .card-title .circle {
     border: 1px solid transparent;
     background-color: black;
     height: 30px;
@@ -824,7 +1148,7 @@ a:hover {
     bottom: 20px;
     left: 10px;
     width: 100%;
-  }
+  } */
 
   .project .card-cust {
     background-color: black;
@@ -931,12 +1255,12 @@ a:hover {
     transition: 00.4s ease-out;
   }
 
-  .note {
+  /* .note {
     transform: translateY(-20%);
-  }
+  } */
 }
 /* different techniques for iPad screening */
-@media only screen and (min-device-width: 300px) and (orientation: portrait) {
+@media only screen and (min-device-width: 300px) and (max-width: 700px) and (orientation: portrait) {
   /* For portrait layouts only */
   .navbar {
     color: black;
@@ -970,19 +1294,23 @@ a:hover {
     overflow-x: hidden;
   }
 
-  .img-overlay {
+
+  /* Changed  */
+
+ .img-overlay {
     max-width: 85%;
-    /* opacity: 1; */
+    opacity: 0.3;
     border-radius: 1rem;
     height: 100%;
-  }
+  } 
+/* 
 
   .card:last-child .img-overlay {
     max-width: 100%;
     opacity: 0.9;
     border-radius: 1rem;
     height: 100%;
-  }
+  } */
 
   .section-1 {
     width: 100%;
@@ -1187,21 +1515,17 @@ a:hover {
   }
 
 
-
+/* Changed  */
   .item-year {
-    color: black;
-    background-color: white;
+    color: white;
+    /* background-color: white; */
     font-size: var(--card-subt-m-lg);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
       'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
   .item-title {
-    background-color: white;
-    color: rgba(black, 0.7);
-    font-size: var(--card-fs-m-lg);
-    font-family: 'Secular One', sans-serif;
-    padding-top: 10px;
+    color: white;
   }
 
   
@@ -1219,11 +1543,12 @@ a:hover {
     padding-top: 20px;
   }
 }
+
+
 /* small screen phones e.g iphone SE */
 @media only screen and (min-device-width: 370px) and (max-device-height: 700px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* For portrait layouts only */
 
-  
   #DP {
     width: 80vw;
   }
@@ -1516,3 +1841,26 @@ a:hover {
 
 
 }
+
+/* @media only screen and (min-height: 500px) and (orientation: portrait) {
+   
+  #DP {
+    width: 40vw;
+  }
+  .item-year {
+    color: black;
+    background-color: transparent;
+    font-size: var(--card-subt-m-lg);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .item-title {
+    background-color: transparent;
+    color: rgba(black, 0.7);
+    font-size: var(--card-fs-m-lg);
+    font-family: 'Secular One', sans-serif;
+    padding-top: 10px;
+  }
+
+} */
