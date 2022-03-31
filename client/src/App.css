@@ -314,7 +314,7 @@ a:hover {
   background-color: white;
 }
 .wk-t {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-family: 'Secular One', sans-serif;
 }
 
@@ -341,6 +341,10 @@ a:hover {
     font-size: 25px;
     font-weight: bold;
     text-align: start;
+  }
+
+  .card-container{
+    padding: 2%;
   }
 
   .close {
@@ -714,9 +718,27 @@ a:hover {
     height: 50px;
   }
   #DP {
-    max-width: 350px;
+    max-width: 300px;
     position: absolute;
     bottom: 15%;
+    right: 0;
+  }
+  .cards {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .card-container{
+    padding: 2%;
+  }
+
+  .img-overlay {
+    max-width: 85%;
+    opacity: 0.3;
+    margin: auto;
   }
 
   .heading {
@@ -739,14 +761,14 @@ a:hover {
   .h2 {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
-    font-size: 3.5vh;
+    font-size: 3vh;
     color: black;
   }
 
   .h3 {
     font-family: 'Secular One', sans-serif;
     font-size: 0.5vw;
-    font-size: 3vh;
+    font-size: 2.7vh;
     letter-spacing: 0.1rem;
     color: rgba(0, 0, 0, 0.3);
   }
@@ -768,8 +790,8 @@ a:hover {
 
   .project .card {
     border-radius: 0;
-    width: 400px;
-    height: 300px;
+    width: auto;
+    height: 250px;
   }
   .card-title {
     color: aliceblue;
@@ -797,19 +819,6 @@ a:hover {
     text-align: center;
   }
 
-  .item-year {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: var(--iten-year-fs);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  }
-
-  .item-title {
-    color: rgba(white, 0.7);
-    font-size: var(--iten-title-fs);
-    font-family: 'Secular One', sans-serif;
-  }
-
   .card-body .bottom-flags {
     position: absolute;
     bottom: 20px;
@@ -819,8 +828,7 @@ a:hover {
 
   .project .card-cust {
     background-color: black;
-    border: 0;
-    width: 400px;
+    width: auto;
     transition: 0.3s ease-in-out;
   }
   .project .card-cust:hover {
@@ -833,7 +841,7 @@ a:hover {
 
   .card {
     border-radius: 0;
-    width: 250px;
+    width: 200px;
     height: 300px;
   }
 
@@ -845,24 +853,59 @@ a:hover {
     z-index: 0;
   }
 
-  .certs .card-cust {
-    background-color: black;
-    border: 0;
-    transition: 0.2s ease-in-out;
+  .cert-card-m {
+    border-radius: 1rem;
+    box-shadow: -1rem 1rem 1rem rgba(38, 57, 77, 0.5);
+    height: var(--card-height-md);
+    transition: 0.2s;
+    min-width: var(--card-width-md);
+    margin-bottom: 60px;
+    display: flex;
+    background-color: #000;
+
   }
 
-  .certs .card-cust:hover {
-    transform: scale(1.1, 1.1);
+  .cert-card-m:hover {
+    transform: translateY(-1rem);
+  }
+  .cert-card-m:hover ~ .cert-card-m {
+    transform: translateY(-1rem);
   }
 
-  .certs-cust {
-    padding-top: 2%;
-    padding-bottom: 5%;
-    /* margin-left: var(--lef-mp-md); */
+  .cert-card-m:not(:first-child) {
+    margin-left: var(--card-nf-m-md);
+  }
+  .cert-card-m:first-child {
+    margin-left: var(--card-fc-m-md);
   }
 
-  .certs .card-cust:hover .verify-cert {
-    color: whitesmoke;
+  .item-year {
+    color: white;
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .item-title {
+    color: rgba(black, 0.7);
+    font-size: 16px;
+    font-family: 'Secular One', sans-serif;
+    padding-top: 10px;
+  }
+
+  
+  .item-year-cert {
+    color: white;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .item-title-cert {
+    color: white;
+    font-size: 14px;
+    font-family: 'Secular One', sans-serif;
+    padding-top: 20px;
   }
 
   .line {
@@ -892,9 +935,8 @@ a:hover {
     transform: translateY(-20%);
   }
 }
-
 /* different techniques for iPad screening */
-@media only screen and (min-device-width: 300px) and (max-device-width: 1024px) and (orientation: portrait) {
+@media only screen and (min-device-width: 300px) and (orientation: portrait) {
   /* For portrait layouts only */
   .navbar {
     color: black;
@@ -904,6 +946,15 @@ a:hover {
     z-index: 2;
     min-height: var(--navbar-height);
     width: 100%;
+  }
+
+  .note {
+    margin: 20% 0 0 0;
+  }
+
+  
+  #DP {
+    width: 80vw;
   }
 
   .emboss {
@@ -935,11 +986,9 @@ a:hover {
 
   .section-1 {
     width: 100%;
+    height: 100%;
   }
 
-  #DP {
-    width: 90vw;
-  }
 
   .p-image {
     width: 50%;
@@ -1170,16 +1219,300 @@ a:hover {
     padding-top: 20px;
   }
 }
-
 /* small screen phones e.g iphone SE */
 @media only screen and (min-device-width: 370px) and (max-device-height: 700px) and (max-device-width: 1024px) and (orientation: portrait) {
   /* For portrait layouts only */
 
+  
   #DP {
     width: 80vw;
   }
+
+  .navbar {
+    color: black;
+    background-color: white;
+    padding: 0 var(--padding-1rem) 0 var(--padding-1rem);
+    margin: 0;
+    z-index: 2;
+    min-height: var(--navbar-height);
+    width: 100%;
+  }
+
+  .note {
+    margin: 20% 0 0 0;
+  }
+
+  
+  #DP {
+    width: 80vw;
+  }
+
+  .emboss {
+    font-size: 15.5vw;
+    color: rgba(255, 255, 255, 1);
+    text-transform: uppercase;
+    text-shadow: -3px 1px 5px rgba(0, 0, 0, 0.3),
+      1px 1px 0 rgba(255, 255, 255, 1);
+    font-family: 'Secular One', sans-serif;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .img-overlay {
+    max-width: 85%;
+    /* opacity: 1; */
+    border-radius: 1rem;
+    height: 100%;
+  }
+
+  .card:last-child .img-overlay {
+    max-width: 100%;
+    opacity: 0.9;
+    border-radius: 1rem;
+    height: 100%;
+  }
+
+  .section-1 {
+    width: 100%;
+    height: 100%;
+  }
+
+
+  .p-image {
+    width: 50%;
+    float: left;
+    padding-right: 8px;
+  }
+
+  .detail-item-container {
+    float: left;
+    margin-top: 2px;
+  }
+  .detail-item {
+    padding: 0.2rem 0.5rem 0.2rem 0.5rem;
+    margin: 0 0.3rem 0.3rem 0;
+    font-size: var(--detail-item-text);
+  }
+  .details-name {
+    font-weight: bold;
+  }
+  .details-name-title {
+    letter-spacing: 2px;
+    font-size: var(--detail-title-text);
+  }
+
+  .details-name .link-a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .details-name .link-a {
+    font-size: small;
+    background: linear-gradient(
+        to right,
+        rgba(100, 200, 200, 1),
+        rgba(100, 200, 200, 1)
+      ),
+      linear-gradient(
+        to right,
+        rgba(255, 0, 0, 1),
+        rgba(255, 0, 180, 1),
+        rgba(0, 100, 200, 1)
+      );
+    background-size: 100% 3px, 0 3px;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 400ms;
+  }
+
+  .details-name .link-a:hover {
+    background-size: 0 3px, 100% 3px;
+  }
+  .details-links {
+    font-size: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .details-links a {
+    text-decoration: none;
+    color: #18272f;
+    font-weight: 700;
+    position: relative;
+    padding: 0 0 0.5rem 0;
+    margin: 1rem;
+  }
+
+  .details-links a::before {
+    content: '';
+    background-color: hsla(196, 61%, 58%, 0.75);
+    position: absolute;
+    left: 0;
+    bottom: 3px;
+    width: 100%;
+    height: 8px;
+    z-index: 0;
+    color: aliceblue;
+    transition: all 0.1s ease-in-out;
+  }
+
+  .details-links a:hover::before {
+    bottom: 0;
+    height: 100%;
+  }
+
+  .bottom-row {
+    background-color: #000;
+    max-height: 40vh;
+    overflow-y: scroll;
+  }
+
+  .bottom-row-white {
+    max-height: 40vh;
+    overflow-y: scroll;
+  }
+  .scenario-content {
+    font-size: 12px;
+  }
+
+  .display-linebreak {
+    white-space: pre-line;
+    text-align: justify;
+  }
+
+  .Nav-text {
+    font-size: 16px;
+    color: black;
+    border-bottom: whitesmoke;
+  }
+
+  .h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: black;
+  }
+
+  .h3 {
+    font-family: 'Secular One', sans-serif;
+    font-size: 0.5vw;
+    margin-top: 1rem;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    color: gray;
+    margin: 0;
+    padding: 0 0 1rem 0;
+  }
+
+  .heading {
+    font-family: 'Secular One', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+  }
+  .card-title-c {
+    padding: 1rem;
+    background-color: white;
+  }
+
+  .cards {
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    padding-top: 30px;
+    margin-bottom: 30px;
+  }
+  .card {
+    border-radius: 1rem;
+    box-shadow: -1rem 1rem 1rem rgba(38, 57, 77, 0.5);
+    height: var(--card-height-md);
+    transition: 0.2s;
+    min-width: var(--card-width-md);
+    margin-bottom: 60px;
+    display: flex;
+  }
+  .card:not(:first-child) {
+    margin-left: var(--card-nf-m-md);
+  }
+  .card:first-child {
+    margin-left: var(--card-fc-m-md);
+  }
+
+  .card:not(:last-child):hover,
+  .card:not(:last-child):focus-within {
+    transform: translateY(-1rem);
+  }
+  .card-title {
+    color: black;
+    font-size: 5vw;
+  }
+  .cert-card-m {
+    border-radius: 1rem;
+    box-shadow: -1rem 1rem 1rem rgba(38, 57, 77, 0.5);
+    height: var(--card-height-md);
+    transition: 0.2s;
+    min-width: var(--card-width-md);
+    margin-bottom: 60px;
+    display: flex;
+    background-color: #000;
+
+  }
+
+  .cert-card-m:hover {
+    transform: translateY(-1rem);
+  }
+  .cert-card-m:hover ~ .cert-card-m {
+    transform: translateY(-1rem);
+  }
+
+  .cert-card-m:not(:first-child) {
+    margin-left: var(--card-nf-m-md);
+  }
+  .cert-card-m:first-child {
+    margin-left: var(--card-fc-m-md);
+  }
+
+
+
+  .item-year {
+    color: black;
+    background-color: white;
+    font-size: var(--card-subt-m-lg);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .item-title {
+    background-color: white;
+    color: rgba(black, 0.7);
+    font-size: var(--card-fs-m-lg);
+    font-family: 'Secular One', sans-serif;
+    padding-top: 10px;
+  }
+
+  
+  .item-year-cert {
+    color: white;
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+      'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
+  .item-title-cert {
+    color: white;
+    font-size: 14px;
+    font-family: 'Secular One', sans-serif;
+    padding-top: 20px;
+  }
+
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation: landscape) {
   /* For landscape layouts only */
+
+
 }

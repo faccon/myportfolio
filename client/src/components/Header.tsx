@@ -6,7 +6,7 @@ export function Header() {
     <Navbar
       sticky="top"
       collapseOnSelect
-      expand="lg"
+      expand="md"
       variant="light"
       className="navbar"
     >

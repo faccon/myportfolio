@@ -4,7 +4,7 @@ import { RECENT_PROJECT } from "../constants";
 
 export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
   return (
-    <section>
+    <section className="recent-project-sec">
       <Container>
         <Row>
           <Col md={12}>
@@ -53,11 +53,11 @@ export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
                 {data.map((item, index) => {
                   return (
                     <div
-                      className="col d-flex justify-content-center"
+                      className="col card-container d-flex justify-content-center"
                       id={index.toString()}
                       onClick={() => Dialog(item)}
                     >
-                      <div className="card p-0 mt-4 card-cust d-flex">
+                      <div className="card card-cust d-flex">
                         <img
                           src={item.images.slice(0, 1)[0]}
                           className="card-img img-overlay image-blurred-edge"

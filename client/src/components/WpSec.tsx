@@ -13,8 +13,8 @@ export function WpSec() {
             <img src="images/DP.png" alt="dp" id="DP" />
           </Col>
         </Row>
-        <Row className="m-0 mt-2 align-content-center note h-50">
-          <Col md={6} lg={6}>
+        <Row className="align-content-center note">
+          <Col sm={12} md={7}>
             <Col>
               <p className="h3">{NAME}</p>
             </Col>
@@ -34,7 +34,7 @@ export function WpSec() {
             </Col>
           </Col>
 
-          <Col md={6} className="m-0 p-0">
+          <Col md={5} className="m-0 p-0">
             <img
               className="d-none d-md-block"
               src="images/DP.png"

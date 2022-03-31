@@ -14,7 +14,7 @@ export type ProjectItemProps = {
   year: number
   title: string
   Logo?: string
-  features: string[]
+  features?: string[]
   contributors?: contributors[]
   images: string[]
 }

@@ -8,7 +8,7 @@ export function CertificationSec({ data }: CerificationProps) {
       <Container>
         <Row>
           <Col md={12}>
-            <p className="heading pt-5"> {CERTIFICATION} </p>
+            <p className="heading mt-5 d-flex justify-content-center"> {CERTIFICATION} </p>
           </Col>
         </Row>
         <Row sm={12} xs={12} className="cardrow">

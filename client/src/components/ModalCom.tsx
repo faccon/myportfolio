@@ -54,18 +54,22 @@ export function ModalCom({ show, toggle, data }: ModalComProps) {
                     </Col>
                   </>
                 ) : null}
-                <Col className="mb-2" xs={8} md={12}>
-                  <div className="details-name-title">Features:</div>
-                </Col>
-                <Col xs={12} md={12}>
-                  <div className="details-note">
-                    <ul className="column-list detail-item">
-                      {data?.features.map((item, index) => {
-                        return <li id={index.toString()}>{item}</li>;
-                      })}
-                    </ul>
-                  </div>
-                </Col>
+                {data?.features ? (
+                  <>
+                    <Col className="mb-2" xs={8} md={12}>
+                      <div className="details-name-title">Features:</div>
+                    </Col>
+                    <Col xs={12} md={12}>
+                      <div className="details-note">
+                        <ul className="column-list detail-item">
+                          {data?.features?.map((item, index) => {
+                            return <li id={index.toString()}>{item}</li>;
+                          })}
+                        </ul>
+                      </div>
+                    </Col>
+                  </>
+                ) : null}
                 <Col className="pt-5 justify-content-end d-flex" xs={12}>
                   <div className="g-link">
                     <a href={data?.url}>

@@ -96,19 +96,7 @@ export const DUMMY_DB = {
       host: null,
       type: "python",
       Logo: "/images/certificates/python.png",
-      features: [
-        "iBMCloud",
-        "Cloudant",
-        "kubernetes",
-        "microservice",
-        "cloud functions",
-        "CI/CD pipepline",
-        "html",
-        "css",
-        "React Native",
-        "Responsive",
-        "Docker",
-      ],
+      features: undefined
     },
   ],
   certifications: [
