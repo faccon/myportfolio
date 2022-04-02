@@ -13,9 +13,9 @@ export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
         </Row>
         <Row sm={12} xs={12} className="cardrow">
           <>
-            <div className="card-col d-sm-none">
+            <div className="card-col d-block d-md-none">
               <div className="cards">
-                {data.map((item, index) => {
+                {data?.map((item, index) => {
                   return (
                     <div
                       id={index.toString()}
@@ -28,15 +28,15 @@ export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
                         alt=""
                       />
                       <div className="card-img-overlay m-0 p-0">
-                        <div className="card-title card-title-c">
+                        <div className="card-title">
                           <Row>
                             <Col md={12}>
-                              <div className="item-yearsm">{item.year}</div>
+                              <div className="item-year">{item.year}</div>
                             </Col>
                           </Row>
                           <Row>
                             <Col xs={12} sm={12} md={12}>
-                              <div className="item-title-sm m-0">{item.title}</div>
+                              <div className="item-title m-0">{item.title}</div>
                             </Col>
                           </Row>
                         </div>
@@ -47,10 +47,10 @@ export function RecentProjectSec({ data, Dialog }: RecentProjectProps) {
               </div>
             </div>
 
-            {/* from lg visible */}
+            {/* from md visible */}
             <Container className="project d-none d-md-block">
               <div className="row row-cols-1 row-cols-md-2 m-0 g-0">
-                {data.map((item, index) => {
+                {data?.map((item, index) => {
                   return (
                     <div
                       className="col card-container d-flex justify-content-center"

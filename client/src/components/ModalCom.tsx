@@ -4,7 +4,7 @@ import { ProjectItemProps } from "../../types";
 interface ModalComProps {
   show: boolean;
   toggle: () => void;
-  data: ProjectItemProps | undefined;
+  data?: ProjectItemProps;
 }
 
 export function ModalCom({ show, toggle, data }: ModalComProps) {

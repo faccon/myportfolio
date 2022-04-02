@@ -9,20 +9,20 @@ export function SkillsSec({ data }: SkillsSecProps) {
 
 
   return (
-    <section ref={skillsRef} className="sfadeIn">
-      <Row md={12} className="skills mt-3 align-items-center">
+    <section ref={skillsRef} className="skills-container sfadeIn">
+      <Row md={12} className="skills align-items-center">
         <Col md={4} className="d-none d-md-block">
           <div className="left ">
             <h2>{SKILLS}</h2>
           </div>
         </Col>
-        <Col md={12} className="d-block d-md-none pb-3 d-flex justify-content-center">
+        <Col md={12} className="d-block d-md-none d-flex justify-content-center">
           <p className="heading"> {SKILLS} </p>
         </Col>
-        <Col md={8} className='mt-5'>
+        <Col md={8} className='mt-2'>
           <div>
             <Container>
-              {data.map((item, index) => {
+              {data?.map((item, index) => {
                 return (
                   <div className="skill-item-container" key={index}>
                     <div className="skill-item">{item}</div>

@@ -28,29 +28,33 @@ export type CertItemProps = {
 }
 
 export interface ViewerProps {
-  show: boolean;
-  onHide: () => void;
-  url: string;
-  verify: string;
-  title: string;
+  show: boolean
+  onHide: () => void
+  url: string
+  verify: string
+  title: string
 }
-
 
 export type SkillItemProps = string[]
 
 export type ProjectProps = ProjectItemProps[]
 export type CertficateProps = CertItemProps[]
 
+export type dataProps = {
+  certifications?: CertficateProps
+  projects?: ProjectProps
+  skills?: string[]
+}
 export type RecentProjectProps = {
-  data: ProjectProps
+  data?: ProjectProps
   Dialog: (item: ProjectItemProps | undefined) => void
   vDetailOnClick?: () => void
 }
 
 export type CerificationProps = {
-  data: CertficateProps
+  data?: CertficateProps
 }
 
 export type SkillsSecProps = {
-  data: SkillItemProps
+  data?: SkillItemProps
 }

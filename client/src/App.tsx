@@ -1,7 +1,6 @@
 import "./App.css";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
-import { DUMMY_DB } from "./shared";
 import { RecentProjectSec } from "./components/RecentProjectSec";
 import { CertificationSec } from "./components/CertificationSec";
 import { WpSec } from "./components/WpSec";
@@ -12,32 +11,44 @@ import { useEffect, useRef, useState } from "react";
 import { gsap, Power1 } from "gsap";
 import { Container } from "react-bootstrap";
 import { ModalCom } from "./components/ModalCom";
-import { ProjectItemProps } from "../types";
+import { dataProps, ProjectItemProps } from "../types";
 
 function App() {
   const loadingRef = useRef(null);
   const [modalShow, setModalShow] = useState<boolean>(false);
-  const [data, setdata] = useState<ProjectItemProps | undefined>();
+  const [modalData, setModalData] = useState<ProjectItemProps | undefined>();
+  const [data, setdata] = useState<dataProps>();
+
+  useEffect(() => {
+    fetch("https://0c6e7a2b.eu-gb.apigw.appdomain.cloud/api/data/") // Personal API
+      .then((res) => res.json())
+      .then((res) => {
+        setdata(res.data);
+      });
+  }, []);
 
   useEffect(() => {
     const t1 = gsap.timeline({ defaults: { ease: Power1.easeOut } });
 
-    t1.to(document.body, {
-      overflow: "hidden",
-    }).to(loadingRef.current, {
-      y: "-100%",
-      duration: 0.4,
-      delay: 2,
-    });
+    if (data) {
+      t1.to(document.body, {
+        overflow: "hidden",
+      }).to(loadingRef.current, {
+        y: "-100%",
+        duration: 0.4,
+        delay: 2,
+      });
 
-    t1.to(document.body, {
-      overflow: "scroll",
-    });
-  }, []);
+      t1.to(document.body, {
+        overflow: "scroll",
+      });
+    }
+  }, [data]);
+
 
   function modaltoggler(itemObject: ProjectItemProps | undefined) {
     setModalShow(!modalShow);
-    setdata(itemObject);
+    setModalData(itemObject);
   }
 
   return (
@@ -48,12 +59,16 @@ function App() {
         <WpSec />
         <RecentProjectSec
           Dialog={(itemObject) => modaltoggler(itemObject)}
-          data={DUMMY_DB.projects}
+          data={data?.projects}
         />
-        <CertificationSec data={DUMMY_DB.certifications} />
-        <SkillsSec data={DUMMY_DB.skills} />
+        <CertificationSec data={data?.certifications} />
+        <SkillsSec data={data?.skills} />
         <WtSec />
-        <ModalCom data={data} show={modalShow} toggle={() => modaltoggler(undefined)} />
+        <ModalCom
+          data={modalData}
+          show={modalShow}
+          toggle={() => modaltoggler(undefined)}
+        />
       </Container>
       <Footer />
     </>

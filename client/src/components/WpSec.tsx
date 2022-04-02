@@ -19,48 +19,118 @@ export function WpSec() {
   }
 
   return (
-    <section className="section-1 mb-5">
-      <Container className="h-100">
-        <Row className="m-0 p-0 h-50 d-flex">
-          <Col>
-            <div className="emboss">DEVELOPER</div>
-          </Col>
-          <Col className="d-flex justify-content-center d-block m-0 p-0 d-md-none">
-            <img src="images/DP.png" alt="dp" id="DP" />
-          </Col>
-        </Row>
-        <Row className="align-content-center h-50 note">
-          <Col sm={12} md={7} className="h-100">
-            <Col>
-              <p className="h3">{NAME}</p>
-            </Col>
-            <Col>
-              <p className="h2">{SPECIALIZATION}</p>
-            </Col>
-            <Col>
-              <p className="h2">{FIELDS}</p>
-            </Col>
-            <Col>
-              <p className="faint h3">{ABOUT_ME}</p>
-            </Col>
-            <Col>
-              <div className="g-link">
-                <span onClick={toggleModal}>{DOWNLOAD_RESUME}</span>
-              </div>
-            </Col>
-          </Col>
+    <Container id="root-container">
+      <Row classsName="p-0 m-0">
+        <div className="emboss">DEVELOPER</div>
+        <img
+          className="img-fluid d-block d-md-none"
+          src="images/Layer1.png"
+          alt="dp"
+          id="DP"
+        />
 
-          <Col md={5} className="m-0 h-100 p-0 align-items-center d-flex">
-            <img
-              className="d-none d-md-block img-fluid"
-              src="images/DP.png"
-              alt="dp"
-              id="DP"
-            />
+        {/* Left */}
+        <Col sm={12} md={6} className="column ps-4 pb-2">
+          <Col sm={12} className="note">
+            <div className="note-container">
+              <Col sm={12}>
+                <p className="h3">{NAME}</p>
+              </Col>
+              <Col sm={12}>
+                <p className="h2">{SPECIALIZATION}</p>
+              </Col>
+              <Col sm={12}>
+                <p className="h2">{FIELDS}</p>
+              </Col>
+              <Col sm={12}>
+                <p className="faint h3">{ABOUT_ME}</p>
+              </Col>
+              <Col>
+                <div className="g-link">
+                  <span onClick={toggleModal}>{DOWNLOAD_RESUME}</span>
+                </div>
+              </Col>
+            </div>
           </Col>
-        </Row>
-        <Viewer title={CV} verify='' url={RESUME_LINK} show={showModal} onHide={toggleModal} />
-      </Container>
-    </section>
+        </Col>
+
+        {/* Right */}
+        <Col sm={12} md={6} className="column c-2 d-none d-md-block">
+          <img
+            className="img-container"
+            src="images/Layer1.png"
+            alt="dp"
+            id="DP"
+          />
+        </Col>
+      </Row>
+      <Viewer
+        title={CV}
+        verify=""
+        url={RESUME_LINK}
+        show={showModal}
+        onHide={toggleModal}
+      />
+    </Container>
   );
 }
+
+// <Container>
+// <section>
+//   <div className="wp-container">
+//     <div className="upperRow">
+
+//         <div className="emboss">DEVELOPER</div>
+//       <Row>
+//         <Col className="d-flex justify-content-center d-block d-md-none">
+//           <img src="images/DP.png" alt="dp" id="DP" />
+//         </Col>
+//       </Row>
+//     </div>
+
+//     <div className="bottomRow">
+//       <Row className="p-0 m-0">
+//         <Col sm={12} md={{ span: 5 }} className="note">
+//           <div className="note-container">
+//             <Col sm={12}>
+//               <p className="h3">{NAME}</p>
+//             </Col>
+//             <Col sm={12}>
+//               <p className="h2">{SPECIALIZATION}</p>
+//             </Col>
+//             <Col sm={12}>
+//               <p className="h2">{FIELDS}</p>
+//             </Col>
+//             <Col sm={12}>
+//               <p className="faint h3">{ABOUT_ME}</p>
+//             </Col>
+//             <Col>
+//               <div className="g-link">
+//                 <span onClick={toggleModal}>{DOWNLOAD_RESUME}</span>
+//               </div>
+//             </Col>
+//           </div>
+//         </Col>
+//         <Col
+//           md={{ span: 5, offset: 2 }}
+//           className="d-none d-md-block dp-container p-0 align-items-center d-flex"
+//         >
+//           <img
+//             className="img-fluid"
+//             src="images/DP.png"
+//             alt="dp"
+//             id="DP"
+//           />
+//         </Col>
+//       </Row>
+//       <Viewer
+//         title={CV}
+//         verify=""
+//         url={RESUME_LINK}
+//         show={showModal}
+//         onHide={toggleModal}
+//       />
+//     </div>
+//   </div>
+// </section>
+// </Container>

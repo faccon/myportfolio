@@ -19,7 +19,7 @@ export function Header() {
         aria-controls="responsive-navbar-nav"
       />
       <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="justify-content-end ms-auto nav-item-right">
+        <Nav className="nav-item-right ms-auto">
           <Nav.Link href={GITHUB_URL} className="Nav-text">
             {GITHUB}
           </Nav.Link>
@@ -29,5 +29,6 @@ export function Header() {
         </Nav>
       </Navbar.Collapse>
     </Navbar>
+
   );
 }

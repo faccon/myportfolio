@@ -14,40 +14,36 @@ export function CertificationSec({ data }: CerificationProps) {
   }
 
   return (
-    <section>
+    <section className="cert_container">
       <Container>
         <Row>
           <Col md={12}>
-            <p className="heading mt-5 d-flex justify-content-center">
+            <p className="heading d-flex justify-content-center">
               {CERTIFICATION}
             </p>
           </Col>
         </Row>
         <Row sm={12} xs={12} className="cardrow">
-          <div className="card-col d-lg-none">
+          <div className="card-col d-block d-md-none">
             <div className="cards">
-              {data.map((item, index) => {
+              {data?.map((item, index) => {
                 return (
                   <>
                     <div
                       id={index.toString()}
                       onClick={() =>
-                        toggleModal([
-                          item.pdf_url,
-                          item.name,
-                          item.verify,
-                        ])
+                        toggleModal([item.pdf_url, item.name, item.verify])
                       }
-                      className=" card cert-card-m"
+                      className="card"
                     >
                       <div className="card-title">
-                        <Col xs={6} sm={6} md={12}>
-                          <div className="item-title-cert ps-3">
+                        <Col xs={10} sm={8} md={12}>
+                          <div className="item-title-cert">
                             {item.name}
                           </div>
                         </Col>
                         <Col sm={12} md={12}>
-                          <div className="item-year-cert ps-3">
+                          <div className="item-year-cert">
                             By: {item.author}
                           </div>
                         </Col>
@@ -82,10 +78,11 @@ export function CertificationSec({ data }: CerificationProps) {
               })}
             </div>
           </div>
+
           {/* .lg breakpoint */}
-          <Container className="certs d-none d-lg-block">
+          <Container className="certs d-none d-md-block">
             <div className="d-flex certs-cust d-flex justify-content-center m-0 p-0">
-              {data.map((item, index) => {
+              {data?.map((item, index) => {
                 return (
                   <div id={index.toString()} className="card p-0 m-2 card-cust">
                     <div className="card-img-overlay">
