@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Secular+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Secular+One&display=swap');
 
 :root {
   --navbar-height: 7vh;
-  --navbar-color: var(--underline-color);
+  --navbar-color: white;
   --top-padding: 2rem;
   --left-padding: 20vh;
   --underline-color: hsla(196, 61%, 58%, 0.75);
@@ -55,7 +54,7 @@ a {
 }
 
 a:hover {
-  color: #18272f;
+  color: black;
 }
 
 .g-link a,
@@ -160,11 +159,11 @@ a:hover {
 
 .navbar {
   color: black;
-  background-color: white;
+  background-color: var(--navbar-color);
   z-index: 2;
   display: flex;
   align-items: center;
-  padding: 0 12px 0 12px;
+  padding: 5px 12px 5px 12px;
 }
 
 .nav-logo {
@@ -189,8 +188,7 @@ section {
   height: 100%;
   width: 100%;
   max-width: 1280px;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 20vh;
   padding-left: 10px;
 }
 
@@ -207,11 +205,12 @@ section {
 }
 
 #DP {
-  width: 90%;
+  width: 100%;
   margin-top: calc((var(--navbar-height) * 2));
   display: block;
   margin-left: auto;
   margin-right: auto;
+  z-index: 0;
 }
 
 .h2 {
@@ -263,7 +262,7 @@ section {
   left: 0;
   top: calc((var(--navbar-height)));
   text-align: center;
-  z-index: -1;
+  z-index: 0;
 }
 
 .cards {
@@ -534,6 +533,25 @@ section {
   overflow-y: scroll;
 }
 
+.footer .left{
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+
+.tel-icon {
+  font-size: 20px;
+  background-color: whitesmoke;
+  color: black;
+  min-height: 30px;
+  min-width: 30px;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 50%;
+}
+
 /* ======================== */
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -569,6 +587,11 @@ section {
   .emboss {
     font-size: 130px;
   }
+
+  .close{
+    font-size: 35px;
+    cursor: pointer;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -594,11 +617,13 @@ section {
   .emboss {
     font-size: 180px;
     text-align: left;
-    padding-left: 80px;
+    padding-left: 100px;
   }
 
   #DP {
     width: 80%;
+    position: absolute;
+    bottom: 20vh
   }
 
   .img-container {
@@ -607,22 +632,35 @@ section {
     right: 0;
   }
 
-  .card-cust {
-    background-color: black;
-    border-radius: 0;
-    width: 400px;
-    height: 300px;
-    transition: 0.3s ease-in-out;
+  .rcp-card {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .card-cust:hover {
+  .cust-card-row {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: black;
+    border-radius: 0;
+    width: 480px;
+    height: 300px;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+  }
+
+  .card:hover {
     color: white;
   }
 
-  .card-cust:hover .card-title .circle {
+  .card:hover .card-title .circle {
     border: 2px solid white;
   }
 
@@ -696,7 +734,6 @@ section {
   .certs-cust {
     padding-top: 2%;
     padding-bottom: 5%;
-    /* margin-left: var(--lef-mp-md); */
   }
 
   .certs .card-cust:hover .verify-cert {
@@ -747,6 +784,15 @@ section {
   .modal-right {
     max-height: 80vh;
   }
+
+  .Nav-text {
+    font-size: 15px;
+  }
+
+  .note {
+    margin-top: -5vh;
+  }
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
