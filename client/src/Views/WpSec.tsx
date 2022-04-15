@@ -20,7 +20,7 @@ export function WpSec() {
 
   return (
     <Container id="root-container">
-      <section>
+      {/* <section> */}
         <Row classsName="p-0 m-0">
           <div className="emboss">DEVELOPER</div>
           <img
@@ -72,7 +72,7 @@ export function WpSec() {
           show={showModal}
           onHide={toggleModal}
         />
-      </section>
+      {/* </section> */}
     </Container>
   );
 }

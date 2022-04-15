@@ -46,7 +46,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  
 }
 
 a {
@@ -165,6 +164,7 @@ a:hover {
   display: flex;
   align-items: center;
   padding: 5px 12px 5px 12px;
+  width: 100vw;
 }
 
 .nav-logo {
@@ -207,7 +207,7 @@ section {
 
 #DP {
   width: 100%;
-  margin-top: calc((var(--navbar-height) * 2));
+  margin-top: calc((var(--navbar-height) * 0.5));
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -254,15 +254,13 @@ section {
 }
 
 .emboss {
-  font-size: 18vw;
+  font-size: 17vw;
   color: rgba(255, 255, 255, 1);
   text-transform: uppercase;
   text-shadow: -4px 1px 5px rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 1);
   font-family: 'Secular One', sans-serif;
-  position: fixed;
-  left: 0;
-  top: var(--navbar-height);
   text-align: center;
+  transform: translate(0, 70%);
   z-index: 0;
 }
 
@@ -534,7 +532,7 @@ section {
   overflow-y: scroll;
 }
 
-.footer .left{
+.footer .left {
   height: max-content;
   display: flex;
   align-items: center;
@@ -570,10 +568,19 @@ section {
   .note {
     margin-top: auto;
   }
+  .emboss {
+    font-size: 180px;
+    text-align: left;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: -20vh;
+    z-index: 0;
+  }
 
   #DP {
-    width: 95%;
-    /* margin-top: calc((var(--navbar-height) * 2)); */
+    width: 80%;
+    position: absolute;
+    bottom: 0vh;
   }
 
   .c-2 {
@@ -589,7 +596,7 @@ section {
     font-size: 130px;
   }
 
-  .close{
+  .close {
     font-size: 35px;
     cursor: pointer;
   }
@@ -616,15 +623,18 @@ section {
   }
 
   .emboss {
-    font-size: 180px;
+    font-size: 17vw;
     text-align: left;
-    padding-left: 100px;
+    color: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: -35vh;
+    z-index: 0;
   }
 
   #DP {
     width: 80%;
     position: absolute;
-    bottom: 20vh
+    bottom: 0vh;
   }
 
   .img-container {
@@ -789,11 +799,6 @@ section {
   .Nav-text {
     font-size: 15px;
   }
-
-  .note {
-    margin-top: -5vh;
-  }
-
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
