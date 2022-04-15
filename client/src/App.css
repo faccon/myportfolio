@@ -68,6 +68,7 @@ a:hover {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transition: all 0.3s ease-in-out;
+  color: black;
 }
 
 .g-link a:before,
@@ -400,7 +401,7 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: calc((var(--lastchild-mb) * 2 + var(--footer-height)));
+  padding-bottom: 10vh
 }
 
 .last-section {
