@@ -46,6 +46,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  
 }
 
 a {
@@ -258,9 +259,9 @@ section {
   text-transform: uppercase;
   text-shadow: -4px 1px 5px rgba(0, 0, 0, 0.3), 1px 1px 0 rgba(255, 255, 255, 1);
   font-family: 'Secular One', sans-serif;
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: calc((var(--navbar-height)));
+  top: var(--navbar-height);
   text-align: center;
   z-index: 0;
 }
