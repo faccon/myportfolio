@@ -1,9 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Secular+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Secular+One&display=swap');
 
 :root {
   --navbar-height: 7vh;
-  --navbar-color: var(--underline-color);
+  --navbar-color: white;
   --top-padding: 2rem;
   --left-padding: 20vh;
   --underline-color: hsla(196, 61%, 58%, 0.75);
@@ -47,6 +46,7 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  
 }
 
 a {
@@ -55,7 +55,7 @@ a {
 }
 
 a:hover {
-  color: #18272f;
+  color: black;
 }
 
 .g-link a,
@@ -160,11 +160,11 @@ a:hover {
 
 .navbar {
   color: black;
-  background-color: white;
+  background-color: var(--navbar-color);
   z-index: 2;
   display: flex;
   align-items: center;
-  padding: 0 12px 0 12px;
+  padding: 5px 12px 5px 12px;
 }
 
 .nav-logo {
@@ -534,6 +534,25 @@ section {
   overflow-y: scroll;
 }
 
+.footer .left{
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0 10px 0;
+}
+
+.tel-icon {
+  font-size: 20px;
+  background-color: whitesmoke;
+  color: black;
+  min-height: 30px;
+  min-width: 30px;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 50%;
+}
+
 /* ======================== */
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -568,6 +587,11 @@ section {
 
   .emboss {
     font-size: 130px;
+  }
+
+  .close{
+    font-size: 35px;
+    cursor: pointer;
   }
 }
 
@@ -607,22 +631,35 @@ section {
     right: 0;
   }
 
-  .card-cust {
-    background-color: black;
-    border-radius: 0;
-    width: 400px;
-    height: 300px;
-    transition: 0.3s ease-in-out;
+  .rcp-card {
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .card-cust:hover {
+  .cust-card-row {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    background-color: black;
+    border-radius: 0;
+    width: 480px;
+    height: 300px;
+    transition: 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+  }
+
+  .card:hover {
     color: white;
   }
 
-  .card-cust:hover .card-title .circle {
+  .card:hover .card-title .circle {
     border: 2px solid white;
   }
 
@@ -696,7 +733,6 @@ section {
   .certs-cust {
     padding-top: 2%;
     padding-bottom: 5%;
-    /* margin-left: var(--lef-mp-md); */
   }
 
   .certs .card-cust:hover .verify-cert {
@@ -747,6 +783,11 @@ section {
   .modal-right {
     max-height: 80vh;
   }
+
+  .Nav-text {
+    font-size: 15px;
+  }
+
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
